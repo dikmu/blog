@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.zhucai.me/"/>
+  <updated>2017-10-04T17:05:56.414Z</updated>
+  <id>http://blog.zhucai.me/</id>
+  
+  <author>
+    <name>muhongdi@qq.com</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Test1</title>
+    <link href="http://blog.zhucai.me/2017/10/05/Test1/"/>
+    <id>http://blog.zhucai.me/2017/10/05/Test1/</id>
+    <published>2017-10-04T16:13:51.000Z</published>
+    <updated>2017-10-04T17:05:56.414Z</updated>
+    
+    <content type="html"><![CDATA[<p>asdfaf<br>adf<br>a<br>fd<br><img src="http://oxb319f0v.bkt.clouddn.com/1507136683933opudhr3p.png?imageslim" alt="paste image"><br><img src="\\images\pasted-2.png\" alt="upload successful"><br><img src="\\images\pasted-1.png\" alt="upload successful"><br><img src="http://oxb319f0v.bkt.clouddn.com/15071367521409qvx5js9.png?imageslim" alt="paste image"></p><p>adsf</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;asdfaf&lt;br&gt;adf&lt;br&gt;a&lt;br&gt;fd&lt;br&gt;&lt;img src=&quot;http://oxb319f0v.bkt.clouddn.com/1507136683933opudhr3p.png?imageslim&quot; alt=&quot;paste image&quot;&gt;&lt;br&gt;&lt;img sr
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test_pdf</title>
+    <link href="http://blog.zhucai.me/2017/10/04/test-pdf/"/>
+    <id>http://blog.zhucai.me/2017/10/04/test-pdf/</id>
+    <published>2017-10-04T15:34:14.000Z</published>
+    <updated>2017-10-04T16:56:20.595Z</updated>
+    
+    <content type="html"><![CDATA[<div class="row">    <embed src="/resource/pdf/test2.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/resource/pdf/test2.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
+	&lt;/div&gt;
+
+
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://blog.zhucai.me/2017/10/04/hello-world/"/>
+    <id>http://blog.zhucai.me/2017/10/04/hello-world/</id>
+    <published>2017-10-04T14:01:20.077Z</published>
+    <updated>2017-10-04T14:01:20.077Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
