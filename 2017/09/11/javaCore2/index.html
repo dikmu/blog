@@ -3,16 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017 | MUHONGDI&#39;s Blog</title>
+  <title>Java核心要点（2） | MUHONGDI&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="oracle,middleware,javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MUHONGDI&#39;s Blog">
-<meta property="og:url" content="http://blog.zhucai.me/archives/2017/index.html">
+  <meta name="description" content="1.作用域可见性&amp;nbsp;visibilityClasses&amp;nbsp;Method &amp;amp; variables&amp;nbsp;Inner Class&amp;nbsp;Private&amp;nbsp;N/A&amp;nbsp;本Class可见&amp;nbsp;&amp;nbsp;本Class可见&amp;nbsp;Default同package可见同package可见&amp;nbsp;&amp;nbsp;同package可见&amp;nbsp;Protect">
+<meta name="keywords" content="Java,技术,原创">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java核心要点（2）">
+<meta property="og:url" content="http://blog.zhucai.me/2017/09/11/javaCore2/index.html">
 <meta property="og:site_name" content="MUHONGDI&#39;s Blog">
+<meta property="og:description" content="1.作用域可见性&amp;nbsp;visibilityClasses&amp;nbsp;Method &amp;amp; variables&amp;nbsp;Inner Class&amp;nbsp;Private&amp;nbsp;N/A&amp;nbsp;本Class可见&amp;nbsp;&amp;nbsp;本Class可见&amp;nbsp;Default同package可见同package可见&amp;nbsp;&amp;nbsp;同package可见&amp;nbsp;Protect">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2017-10-05T07:20:53.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MUHONGDI&#39;s Blog">
+<meta name="twitter:title" content="Java核心要点（2）">
+<meta name="twitter:description" content="1.作用域可见性&amp;nbsp;visibilityClasses&amp;nbsp;Method &amp;amp; variables&amp;nbsp;Inner Class&amp;nbsp;Private&amp;nbsp;N/A&amp;nbsp;本Class可见&amp;nbsp;&amp;nbsp;本Class可见&amp;nbsp;Default同package可见同package可见&amp;nbsp;&amp;nbsp;同package可见&amp;nbsp;Protect">
   
     <link rel="alternate" href="/atom.xml" title="MUHONGDI&#39;s Blog" type="application/atom+xml">
   
@@ -63,215 +67,68 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/08/AdfBcRestPerformance/" class="archive-article-date">
-  <time datetime="2017-10-08T12:58:06.000Z" itemprop="datePublished">10月 8</time>
+        <section id="main"><article id="post-javaCore2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/11/javaCore2/" class="article-date">
+  <time datetime="2017-09-11T03:47:04.000Z" itemprop="datePublished">2017-09-11</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/08/AdfBcRestPerformance/">Oracle ADF REST BC性能测试</a>
+    <h1 class="article-title" itemprop="name">
+      Java核心要点（2）
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/08/SparkTestEnvInstallragment/" class="archive-article-date">
-  <time datetime="2017-10-08T12:38:00.000Z" itemprop="datePublished">10月 8</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/08/SparkTestEnvInstallragment/">Spark2.2集群安装概要</a>
-    </h1>
-  
+        <p>1.作用域可见性<wbr><div><table width="80%" border="1" cellpadding="1" cellspacing="1"><tbody><tr><td>&nbsp;visibility</td><td>Classes&nbsp;</td><td>Method &amp; variables&nbsp;</td><td>Inner Class&nbsp;</td></tr><tr><td>Private&nbsp;</td><td>N/A&nbsp;</td><td>本Class可见&nbsp;</td><td>&nbsp;本Class可见</td></tr><tr><td>&nbsp;Default</td><td>同package可见</td><td>同package可见&nbsp;</td><td>&nbsp;同package可见</td></tr><tr><td>&nbsp;Protected</td><td>N/A&nbsp;</td><td>同package可见+继承可见&nbsp;</td><td>同package可见+继承可见&nbsp;</td></tr><tr><td>&nbsp;Public</td><td>Any package&nbsp;</td><td>任何地方都可见&nbsp;</td><td>&nbsp;任何地方都可见</td></tr></tbody></table>&nbsp; &nbsp;</div><div>2.内部类的调用</div><div>Outter outter=new Outter()</div><div>Outter.Inner inner=new outter.new Inner()</div><div><br></div><div>3.运算时 i=x+y &nbsp; &nbsp;左值由空间保障，右值没有空间保障</div><div>4.y=x++ &nbsp;vs &nbsp; y=++x &nbsp; &nbsp; 前一种会引入一个tmp变量来保存中间数，后一种不会，推荐使用后者</div><div>5.if(x&lt;0 &amp; ++x&gt;0) ….</div><div>&nbsp; &nbsp;if(boolean &amp; boolean) …. and操作，会执行左右两端</div><div>&nbsp; &nbsp;if(boolean &amp;&amp; boolean) …. shortcut and操作，只执行一端</div><div>&nbsp; &nbsp;if(boolean | boolean) …. （待验证）</div><div>&nbsp; &nbsp;if(boolean || boolean) …. （待验证）</div><div>6.for while上面可加label</div><div><span style="white-space:pre;">    </span>AAA：</div><div><span style="white-space:pre;">    </span>for…. continue AAA; &nbsp; break AAA;</div><div><br></div><div>7.Java异常继承结构</div><div><span style="white-space:pre;">            </span>Throwable &nbsp;&nbsp;</div><div>Error &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Exception</div><div><span style="white-space:pre;">        </span>&nbsp; |<span style="white-space:pre;">    </span>RunTimeException</div>JVM态<span style="white-space:pre;">    </span>&nbsp; | &nbsp;&nbsp;<span style="white-space:pre;">    </span>用户态<div>因此所有异常都可catch(Throwable e)</div><div><br></div><div>8.checked Exception 需要提前try catch</div><div><span style="white-space:pre;">    </span>unchecked Exception 不需要提前try catch</div></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/" class="archive-article-date">
-  <time datetime="2017-10-05T07:59:37.000Z" itemprop="datePublished">10月 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/">Oracle SOA&amp;BPM开发运维经验总结</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/" class="archive-article-date">
-  <time datetime="2017-10-05T07:52:54.000Z" itemprop="datePublished">10月 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/09/11/javaCore2/" data-id="cj8ist530002848qr7g1sz3cd" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/">精通一套非主流框架给我带来哪些收获</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/" class="archive-article-date">
-  <time datetime="2017-10-05T07:46:26.000Z" itemprop="datePublished">10月 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/">企业级系统到底有多复杂</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/04/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/11/javaCore1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java核心要点（1）</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy5/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy5/">scala学习笔记（五）集合操作</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy6/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy6/">scala学习笔记（六）Map和Tuple</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy4/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:38.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy4/">scala学习笔记（四）流程控制</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy3/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:35.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy3/">scala学习笔记（三）Scala函数式编程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy1/" class="archive-article-date">
-  <time datetime="2017-10-05T07:23:19.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy1/">Scala学习笔记（一）安装</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">

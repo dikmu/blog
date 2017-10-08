@@ -3,16 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017 | MUHONGDI&#39;s Blog</title>
+  <title>Scala学习笔记（二）Scala面向对象编程 | MUHONGDI&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="oracle,middleware,javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MUHONGDI&#39;s Blog">
-<meta property="og:url" content="http://blog.zhucai.me/archives/2017/index.html">
+  <meta name="description" content="package com.study /**  * Scala面向对象编程  *   * 1，在scala中类是用Class关键字  * 2，可以使用new ClassName的方式构建出类的对象  * 3，如果名称相同，则object中的内容都是class的静态内容，也就是说object中的内容class都可以在没有实例的时候直接去调用；  * 正是因为可以再没有类的时候去调用object的一切内">
+<meta name="keywords" content="技术,原创,Scala">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scala学习笔记（二）Scala面向对象编程">
+<meta property="og:url" content="http://blog.zhucai.me/2017/10/05/scalaStudy2/index.html">
 <meta property="og:site_name" content="MUHONGDI&#39;s Blog">
+<meta property="og:description" content="package com.study /**  * Scala面向对象编程  *   * 1，在scala中类是用Class关键字  * 2，可以使用new ClassName的方式构建出类的对象  * 3，如果名称相同，则object中的内容都是class的静态内容，也就是说object中的内容class都可以在没有实例的时候直接去调用；  * 正是因为可以再没有类的时候去调用object的一切内">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2017-10-05T07:30:43.386Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MUHONGDI&#39;s Blog">
+<meta name="twitter:title" content="Scala学习笔记（二）Scala面向对象编程">
+<meta name="twitter:description" content="package com.study /**  * Scala面向对象编程  *   * 1，在scala中类是用Class关键字  * 2，可以使用new ClassName的方式构建出类的对象  * 3，如果名称相同，则object中的内容都是class的静态内容，也就是说object中的内容class都可以在没有实例的时候直接去调用；  * 正是因为可以再没有类的时候去调用object的一切内">
   
     <link rel="alternate" href="/atom.xml" title="MUHONGDI&#39;s Blog" type="application/atom+xml">
   
@@ -63,215 +67,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/08/AdfBcRestPerformance/" class="archive-article-date">
-  <time datetime="2017-10-08T12:58:06.000Z" itemprop="datePublished">10月 8</time>
+        <section id="main"><article id="post-scalaStudy2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/scalaStudy2/" class="article-date">
+  <time datetime="2017-10-05T07:23:19.000Z" itemprop="datePublished">2017-10-05</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Scala/">Scala</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/08/AdfBcRestPerformance/">Oracle ADF REST BC性能测试</a>
+    <h1 class="article-title" itemprop="name">
+      Scala学习笔记（二）Scala面向对象编程
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/08/SparkTestEnvInstallragment/" class="archive-article-date">
-  <time datetime="2017-10-08T12:38:00.000Z" itemprop="datePublished">10月 8</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/08/SparkTestEnvInstallragment/">Spark2.2集群安装概要</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/" class="archive-article-date">
-  <time datetime="2017-10-05T07:59:37.000Z" itemprop="datePublished">10月 5</time>
-</a>
+        <pre class="prettyprint"><p>package com.study<br><br> /**<br>  * Scala面向对象编程<br>  * <br>  * 1，在scala中类是用Class关键字<br>  * 2，可以使用new ClassName的方式构建出类的对象<br>  * 3，如果名称相同，则object中的内容都是class的静态内容，也就是说object中的内容class都可以在没有实例的时候直接去调用；<br>  * 正是因为可以再没有类的时候去调用object的一切内容，所以可以使用object中的特定方法来创建类的实例，而这个特定方法就是apply方法；<br>  * 4，object中的apply方式是class对象生成的工厂方法，用于控制对象的生成；<br>  * 5，很多框架的代码一般直接调用抽象类的object的apply方法去生成类的实例对象：<br>  * 第一：其秘诀在于apply具有类的对象生成的一切生杀大权，抽象类是不可以直接实例化的，在apply方法中可以实例化抽象类的子类，以Spark中的<br>  * 图计算为例，Graph是抽象的class，在object Graph中的apply方法实际上是调用了Grap的子类GraphImpl来构建<br>  * Graph类型的对象实例的，当然从Spark图计算的源码可以看出，GraphImpl的构造对象也是使用了object GraphImpl的apply方法；<br>  * 第二：这种方式的神奇学校应在于，更加能够应对代表版本迭代或者修改的变化，这是更高意义的面向接口编程；<br>  * 6，object HelloOOP是class HelloOOP的伴生对象，class HelloOOP可以直接访问object HelloOOP中的一切内容。<br>  *     class HelloOOP是object HelloOOP的伴生类，object HelloOOP可以直接访问class HelloOOP的一切内容，一个特例是用private[this]修饰的成员。<br>  * <br>  * 7，在定义Scala的Class的时候，可以直接在类名后面（）里加入类的构造参数，此时在apply方法中也必须有这些参数<br>  * 8，Scala中可以在object中提供多个构造方法<br>  */<br>class HelloOOP(age:Int){<br>  var name="Spark"<br>  def sayHello=println("Hi,My name is "+name+" I am "+ age + "years old")<br>  println(sayHello)<br>} <br><br>object HelloOOP {<br>  var number=0<br><br>  def main(args: Array[String]): Unit = {<br>    var helloOOP=HelloOOP()<br>    helloOOP.sayHello<br>  }<br>  <br>  <br>  def apply():HelloOOP={<br>    new HelloOOP(10)<br>  }<br>  <br>  def apply(age:Int ):HelloOOP={<br>    new HelloOOP(age)<br>  }<br>}</p></pre>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/">Oracle SOA&amp;BPM开发运维经验总结</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/" class="archive-article-date">
-  <time datetime="2017-10-05T07:52:54.000Z" itemprop="datePublished">10月 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy2/" data-id="cj8ist537002d48qrhdrtarxy" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/">精通一套非主流框架给我带来哪些收获</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/" class="archive-article-date">
-  <time datetime="2017-10-05T07:46:26.000Z" itemprop="datePublished">10月 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/">企业级系统到底有多复杂</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/05/scalaStudy1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Scala学习笔记（一）安装
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/04/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy5/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy5/">scala学习笔记（五）集合操作</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy6/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy6/">scala学习笔记（六）Map和Tuple</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy4/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:38.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy4/">scala学习笔记（四）流程控制</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy3/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:35.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy3/">scala学习笔记（三）Scala函数式编程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy1/" class="archive-article-date">
-  <time datetime="2017-10-05T07:23:19.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy1/">Scala学习笔记（一）安装</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">

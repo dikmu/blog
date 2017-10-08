@@ -3,16 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017 | MUHONGDI&#39;s Blog</title>
+  <title>Spark2.2集群安装概要 | MUHONGDI&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="oracle,middleware,javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MUHONGDI&#39;s Blog">
-<meta property="og:url" content="http://blog.zhucai.me/archives/2017/index.html">
+  <meta name="description" content="Spark2.2集群安装概要(Installing Spark Standalone to a Cluster) 1.本文概要Spark2.2提供以下三种安装方式：  Mesos YARN cluster simple standalone deploy mode（Spark Standalone）  本文采用第3种，即使用Spark自带的集群 2.硬件环境1台Dell笔记本 16G1台Think">
+<meta name="keywords" content="技术,Spark,环境安装,大数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spark2.2集群安装概要">
+<meta property="og:url" content="http://blog.zhucai.me/2017/10/08/SparkTestEnvInstallragment/index.html">
 <meta property="og:site_name" content="MUHONGDI&#39;s Blog">
+<meta property="og:description" content="Spark2.2集群安装概要(Installing Spark Standalone to a Cluster) 1.本文概要Spark2.2提供以下三种安装方式：  Mesos YARN cluster simple standalone deploy mode（Spark Standalone）  本文采用第3种，即使用Spark自带的集群 2.硬件环境1台Dell笔记本 16G1台Think">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507466581022evbw4ico.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507466631718mh82d53k.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/15074666847095zxmsh2c.png?imageslim">
+<meta property="og:updated_time" content="2017-10-08T12:48:29.803Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MUHONGDI&#39;s Blog">
+<meta name="twitter:title" content="Spark2.2集群安装概要">
+<meta name="twitter:description" content="Spark2.2集群安装概要(Installing Spark Standalone to a Cluster) 1.本文概要Spark2.2提供以下三种安装方式：  Mesos YARN cluster simple standalone deploy mode（Spark Standalone）  本文采用第3种，即使用Spark自带的集群 2.硬件环境1台Dell笔记本 16G1台Think">
+<meta name="twitter:image" content="http://oxb319f0v.bkt.clouddn.com/1507466581022evbw4ico.png?imageslim">
   
     <link rel="alternate" href="/atom.xml" title="MUHONGDI&#39;s Blog" type="application/atom+xml">
   
@@ -63,215 +71,93 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/08/AdfBcRestPerformance/" class="archive-article-date">
-  <time datetime="2017-10-08T12:58:06.000Z" itemprop="datePublished">10月 8</time>
+        <section id="main"><article id="post-SparkTestEnvInstallragment" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/08/SparkTestEnvInstallragment/" class="article-date">
+  <time datetime="2017-10-08T12:38:00.000Z" itemprop="datePublished">2017-10-08</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/产品/">产品</a>►<a class="article-category-link" href="/categories/技术/产品/大数据/">大数据</a>►<a class="article-category-link" href="/categories/技术/产品/大数据/Spark/">Spark</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/08/AdfBcRestPerformance/">Oracle ADF REST BC性能测试</a>
+    <h1 class="article-title" itemprop="name">
+      Spark2.2集群安装概要
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/08/SparkTestEnvInstallragment/" class="archive-article-date">
-  <time datetime="2017-10-08T12:38:00.000Z" itemprop="datePublished">10月 8</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/08/SparkTestEnvInstallragment/">Spark2.2集群安装概要</a>
-    </h1>
-  
+        <p>Spark2.2集群安装概要(Installing Spark Standalone to a Cluster)</p>
+<p>1.本文概要<br>Spark2.2提供以下三种安装方式：</p>
+<ol>
+<li>Mesos</li>
+<li>YARN cluster</li>
+<li>simple standalone deploy mode（Spark Standalone）</li>
+</ol>
+<p>本文采用第3种，即使用Spark自带的集群</p>
+<p>2.硬件环境<br>1台Dell笔记本 16G<br>1台Thinkpad笔记本 8G</p>
+<p>3.虚拟机<br>Dell笔记本：1 VM <em> 8G内存<br>Thinkpad笔记本：2 VM </em> 4G内存<br>桥接网络，以单独机器的形式连接到局域网</p>
+<ul>
+<li>Dell笔记本：只能使用Oracle的VirtualBox(5.1.28)，使用vmware安装虚拟机后报错<br>Thinkpad笔记本：只能使用VMware Workstation 12 pro（12.5.7b/workstation pro），使用VirtualBox安装虚拟机后报错</li>
+</ul>
+<p>4.软件环境<br>尽量采用最新版本，当前时间2017年9月<br>操作系统Ubuntu 17.04<br>下载scala-2.12.3   解压到/data01/spark/scala-2.12.3<br>下载spark-2.2.0-bin-hadoop2.7   解压到/data01/spark/spark-2.2.0-bin-hadoop2.7<br>下载jdk1.8.0_144    解压到/data01/spark/jdk1.8.0_144</p>
+<p>配置环境变量</p>
+<p>5.配置<br>spark-env.sh<br><img src="http://oxb319f0v.bkt.clouddn.com/1507466581022evbw4ico.png?imageslim" alt="paste image"><br>Master1是Master机器的hostname</p>
+<p>6.slaves<br><img src="http://oxb319f0v.bkt.clouddn.com/1507466631718mh82d53k.png?imageslim" alt="paste image"><br>先配置两台机器的hostname<br>在/etc/hostname配置</p>
+<p>7.spark-default<br>是spark的默认配置，这里不做修改</p>
+<p>提示：ubuntu 17中，root用户默认没有.bash_profile文件，如果要登录后自动加载环境变量，可以在~/.bashrc文件的末尾加上 . ~/.bash_profile 。然后编写.bash_profile</p>
+<p>什么都不用配置，直接运行<br>./sbin/start-master.sh<br>即可通过URL <a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> 访问<br>root@muhongdi-VirtualBox:/data01/spark/spark-2.2.0-bin-hadoop2.7/sbin# ./start-master.sh<br>starting org.apache.spark.deploy.master.Master, logging to /data01/spark/spark-2.2.0-bin-hadoop2.7/logs/spark-root-org.apache.spark.deploy.master.Master-1-muhongdi-VirtualBox.out</p>
+<p>相似的，运行Worker节点地方法<br>./sbin/start-slave.sh <master-spark-url></master-spark-url></p>
+<p><master-spark-url>是<a href="http://localhost:8080中对应的URL" target="_blank" rel="external">http://localhost:8080中对应的URL</a></master-spark-url></p>
+<p>root@muhongdi-VirtualBox:/data01/spark/spark-2.2.0-bin-hadoop2.7/sbin# ./start-slave.sh spark://muhongdi-VirtualBox:7077<br>starting org.apache.spark.deploy.worker.Worker, logging to /data01/spark/spark-2.2.0-bin-hadoop2.7/logs/spark-root-org.apache.spark.deploy.worker.Worker-1-muhongdi-VirtualBox.out</p>
+<p><img src="http://oxb319f0v.bkt.clouddn.com/15074666847095zxmsh2c.png?imageslim" alt="paste image"></p>
+<p>那么，是否可以在当前机器中，再运行一个Slave呢？<br>我试了一下，返回下面的错误，看来是不可以的。<br>org.apache.spark.deploy.worker.Worker running as process 11471.  Stop it first.</p>
+<p>开启另一台PC机上的虚拟机</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/" class="archive-article-date">
-  <time datetime="2017-10-05T07:59:37.000Z" itemprop="datePublished">10月 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/">Oracle SOA&amp;BPM开发运维经验总结</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/" class="archive-article-date">
-  <time datetime="2017-10-05T07:52:54.000Z" itemprop="datePublished">10月 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/08/SparkTestEnvInstallragment/" data-id="cj8ist50t000648qrphbp6xbc" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/">精通一套非主流框架给我带来哪些收获</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/" class="archive-article-date">
-  <time datetime="2017-10-05T07:46:26.000Z" itemprop="datePublished">10月 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/">企业级系统到底有多复杂</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spark/">Spark</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/环境安装/">环境安装</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/08/AdfBcRestPerformance/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Oracle ADF REST BC性能测试
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Oracle SOA&amp;BPM开发运维经验总结</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy5/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy5/">scala学习笔记（五）集合操作</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy6/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy6/">scala学习笔记（六）Map和Tuple</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy4/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:38.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy4/">scala学习笔记（四）流程控制</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy3/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:35.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy3/">scala学习笔记（三）Scala函数式编程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy1/" class="archive-article-date">
-  <time datetime="2017-10-05T07:23:19.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy1/">Scala学习笔记（一）安装</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">

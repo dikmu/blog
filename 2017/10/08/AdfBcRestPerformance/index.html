@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Oracle ADF REST BC性能测试 | MUHONGDI&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Version：ADF 12C环境：JDK1.7 + Weblogic12c + Oracle DataBase 11g RAC设置：JDBC数据源最大连接数设为2000初始100，每次增长100压测机：loadRunder 2台被压机器：Linux 1台 概要：新的ADF12c版本优化了REST的实现方式，可以轻松在ViewController层发布REST应用，并采用REST从AM连接池获取A">
+<meta name="keywords" content="Java,技术,原创,ADF,REST,SOA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle ADF REST BC性能测试">
+<meta property="og:url" content="http://blog.zhucai.me/2017/10/08/AdfBcRestPerformance/index.html">
+<meta property="og:site_name" content="MUHONGDI&#39;s Blog">
+<meta property="og:description" content="Version：ADF 12C环境：JDK1.7 + Weblogic12c + Oracle DataBase 11g RAC设置：JDBC数据源最大连接数设为2000初始100，每次增长100压测机：loadRunder 2台被压机器：Linux 1台 概要：新的ADF12c版本优化了REST的实现方式，可以轻松在ViewController层发布REST应用，并采用REST从AM连接池获取A">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/15074676714694dawp23v.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507467716190xgd7juow.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/15074677518650qoy7lsz.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507467778286f7mf7lar.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/15074677925101ghrgggp.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507467811770lkhfmpjq.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/15074678274767r62ydbx.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507467848007suie9fa5.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/15074678697618je5w50v.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507467890054qbludqsh.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/15074679047376n733ps1.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507467928856rsuzu84b.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507467947601uy1rv6b6.png?imageslim">
+<meta property="og:image" content="http://oxb319f0v.bkt.clouddn.com/1507467965963w9cv7zyk.png?imageslim">
+<meta property="og:updated_time" content="2017-10-08T13:11:12.568Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oracle ADF REST BC性能测试">
+<meta name="twitter:description" content="Version：ADF 12C环境：JDK1.7 + Weblogic12c + Oracle DataBase 11g RAC设置：JDBC数据源最大连接数设为2000初始100，每次增长100压测机：loadRunder 2台被压机器：Linux 1台 概要：新的ADF12c版本优化了REST的实现方式，可以轻松在ViewController层发布REST应用，并采用REST从AM连接池获取A">
+<meta name="twitter:image" content="http://oxb319f0v.bkt.clouddn.com/15074676714694dawp23v.png?imageslim">
+  
+    <link rel="alternate" href="/atom.xml" title="MUHONGDI&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MUHONGDI&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/About">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.zhucai.me"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-AdfBcRestPerformance" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/08/AdfBcRestPerformance/" class="article-date">
+  <time datetime="2017-10-08T12:58:06.000Z" itemprop="datePublished">2017-10-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/测试/">测试</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Oracle ADF REST BC性能测试
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Version：ADF 12C<br>环境：JDK1.7 + Weblogic12c + Oracle DataBase 11g RAC<br>设置：<img src="http://oxb319f0v.bkt.clouddn.com/15074676714694dawp23v.png?imageslim" alt="paste image"><br>JDBC数据源最大连接数设为2000<br>初始100，每次增长100<br>压测机：loadRunder 2台<br>被压机器：Linux 1台</p>
+<p>概要：新的ADF12c版本优化了REST的实现方式，可以轻松在ViewController层发布REST应用，并采用REST从AM连接池获取AM的方式进行数据库访问。基于此更新使得我们可以针对ADF BC层进行一次彻底的压力测试。</p>
+<p>本文只简要介绍了压测结果，实际压测过程中还遇到了如JVM内存调优，Weblogic调优，AM连接池调优等问题，有可能在今后的博文中介绍，这里暂时略过。<br>todo</p>
+<p>压测场景是模拟2000个用户针对单张Table的20000条记录进行查询/修改操作，并转换成JsonObject/JsonArray。分别测试了根据ID查询，根据非ID字段模糊查询的性能。</p>
+<ol>
+<li>updateUserInfo</li>
+</ol>
+<p>这是针对单表的更新操作<br>2000并发 运行30分钟</p>
+<p>用户操作图，用户数2000：<br><img src="http://oxb319f0v.bkt.clouddn.com/1507467716190xgd7juow.png?imageslim" alt="paste image"><br>AM实例情况</p>
+<p>运行过程中，针对AM监控，截图如下：<br><img src="http://oxb319f0v.bkt.clouddn.com/15074677518650qoy7lsz.png?imageslim" alt="paste image"><br>AM实例数初始为100个，在执行过程中降为11个，说明在2000并发下执行update时共使用了89个AM实例。</p>
+<p>AM实例创建的最长时间为5毫秒,平均为0.53毫秒。</p>
+<p>因为每次请求用的都是不同的session，因此只有钝化数，没有激活数。</p>
+<p>因为没有登录功能，2000个用户每次进行操作都会创建一个session。</p>
+<p>我们将session过期时间设为1分钟，默认30分钟会出现java GC无效，内存溢出问题。这里很有提升空间</p>
+<p>平均事务响应时间趋势图：<br><img src="http://oxb319f0v.bkt.clouddn.com/1507467778286f7mf7lar.png?imageslim" alt="paste image"><br>平均事务响应时间：1.748 s</p>
+<p>应用服务器CPU空闲率在50%左右<br><img src="http://oxb319f0v.bkt.clouddn.com/15074677925101ghrgggp.png?imageslim" alt="paste image"></p>
+<ol>
+<li>queryUserById_db</li>
+</ol>
+<p>根据ID进行查询<br>2000并发 运行25分钟<br><img src="http://oxb319f0v.bkt.clouddn.com/1507467811770lkhfmpjq.png?imageslim" alt="paste image"><br>平均事务响应时间趋势图：平均事务响应时间：1.585s<br><img src="http://oxb319f0v.bkt.clouddn.com/15074678274767r62ydbx.png?imageslim" alt="paste image"><br>应用服务器CPU 空闲率：保持在50%左右<br><img src="http://oxb319f0v.bkt.clouddn.com/1507467848007suie9fa5.png?imageslim" alt="paste image"></p>
+<p>3.queryUserByName_db</p>
+<p>根据非ID字段进行模糊匹配，并返回最多10笔记录</p>
+<p>1500并发 运行19分钟<br><img src="http://oxb319f0v.bkt.clouddn.com/15074678697618je5w50v.png?imageslim" alt="paste image"><br>平均事务响应时间趋势图：平均事务响应时间保持在2s以下<br><img src="http://oxb319f0v.bkt.clouddn.com/1507467890054qbludqsh.png?imageslim" alt="paste image"><br>应用服务器CPU空闲率保持在25%以上<br><img src="http://oxb319f0v.bkt.clouddn.com/15074679047376n733ps1.png?imageslim" alt="paste image"></p>
+<p>4.综合场景</p>
+<p>同时运行以下事务：<br>queryApps_rowFinder 查询操作，返回多比结果</p>
+<p>category_JsonFormat 查询操作，返回多比结果，并进行3层循环的json格式转换</p>
+<p>iwantto_JsonFormat 查询操作，返回多比结果，并进行3层循环的json格式转换</p>
+<p>1500并发运行15分钟</p>
+<p><img src="http://oxb319f0v.bkt.clouddn.com/1507467928856rsuzu84b.png?imageslim" alt="paste image"><br>平均事务响应时间趋势图：平均事务响应时间均保持在0.5s~0.6s之间，响应稳定<br><img src="http://oxb319f0v.bkt.clouddn.com/1507467947601uy1rv6b6.png?imageslim" alt="paste image"><br>应用服务器CPU空闲率保持在0~50%之间<br><img src="http://oxb319f0v.bkt.clouddn.com/1507467965963w9cv7zyk.png?imageslim" alt="paste image"></p>
+<p>结论：</p>
+<p>测试时间：2015年</p>
+<p>测试环境：单台PC机运行后台程序</p>
+<p>模拟场景：企业级基于事务的对单表增删该查操作。</p>
+<p>2000并发下针对ADF的一个Method进行压测，读取和修改的平均响应时间均在2秒内，AM实例数在100以内，JDBC连接保持在100内。</p>
+<p>由于使用的是单台笔记本作为服务器，因此适当提高硬件水平可以继续提升单机性能</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/08/AdfBcRestPerformance/" data-id="cj8ist508000048qr9he768lp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ADF/">ADF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/REST/">REST</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SOA/">SOA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/08/SparkTestEnvInstallragment/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Spark2.2集群安装概要</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/感悟/">感悟</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/">产品</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/BPM/">BPM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/SOA/">SOA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/">大数据</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/Spark/">Spark</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/">开发</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/">后端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Scala/">Scala</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/测试/">测试</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADF/">ADF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/REST/">REST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SOA/">SOA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scala/">Scala</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spark/">Spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/企业级系统/">企业级系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原创/">原创</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/大数据/">大数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感悟/">感悟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境安装/">环境安装</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ADF/" style="font-size: 10px;">ADF</a> <a href="/tags/Java/" style="font-size: 14px;">Java</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/REST/" style="font-size: 10px;">REST</a> <a href="/tags/SOA/" style="font-size: 12px;">SOA</a> <a href="/tags/Scala/" style="font-size: 16px;">Scala</a> <a href="/tags/Spark/" style="font-size: 10px;">Spark</a> <a href="/tags/企业级系统/" style="font-size: 12px;">企业级系统</a> <a href="/tags/原创/" style="font-size: 20px;">原创</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/感悟/" style="font-size: 12px;">感悟</a> <a href="/tags/技术/" style="font-size: 18px;">技术</a> <a href="/tags/环境安装/" style="font-size: 10px;">环境安装</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/08/AdfBcRestPerformance/">Oracle ADF REST BC性能测试</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/08/SparkTestEnvInstallragment/">Spark2.2集群安装概要</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/">Oracle SOA&amp;BPM开发运维经验总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/">精通一套非主流框架给我带来哪些收获</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/">企业级系统到底有多复杂</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 muhongdi@qq.com<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/About" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

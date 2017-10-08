@@ -3,16 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017 | MUHONGDI&#39;s Blog</title>
+  <title>Oracle SOA&amp;BPM开发运维经验总结 | MUHONGDI&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="oracle,middleware,javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MUHONGDI&#39;s Blog">
-<meta property="og:url" content="http://blog.zhucai.me/archives/2017/index.html">
+  <meta name="description" content="华为项目版本：Oracle SOA v11.1.1.7开发运维经验总结  1. DBAdapter在Insert记录时，所选的Sequence是不可靠的。  2. 使用while循环时，索引从1开始，不是0。  3. While中循环条件设置：指向’…Collection/ObjectT[$i]’!=’null’。  4. DBAdapter的命名直接取表名（对象名）即可。Invoke时可指定操作">
+<meta name="keywords" content="原创,SOA,Oracle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle SOA&amp;BPM开发运维经验总结">
+<meta property="og:url" content="http://blog.zhucai.me/2017/10/05/OracleSoaDevMaintenanceExpSummary/index.html">
 <meta property="og:site_name" content="MUHONGDI&#39;s Blog">
+<meta property="og:description" content="华为项目版本：Oracle SOA v11.1.1.7开发运维经验总结  1. DBAdapter在Insert记录时，所选的Sequence是不可靠的。  2. 使用while循环时，索引从1开始，不是0。  3. While中循环条件设置：指向’…Collection/ObjectT[$i]’!=’null’。  4. DBAdapter的命名直接取表名（对象名）即可。Invoke时可指定操作">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2017-10-08T12:52:17.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MUHONGDI&#39;s Blog">
+<meta name="twitter:title" content="Oracle SOA&amp;BPM开发运维经验总结">
+<meta name="twitter:description" content="华为项目版本：Oracle SOA v11.1.1.7开发运维经验总结  1. DBAdapter在Insert记录时，所选的Sequence是不可靠的。  2. 使用while循环时，索引从1开始，不是0。  3. While中循环条件设置：指向’…Collection/ObjectT[$i]’!=’null’。  4. DBAdapter的命名直接取表名（对象名）即可。Invoke时可指定操作">
   
     <link rel="alternate" href="/atom.xml" title="MUHONGDI&#39;s Blog" type="application/atom+xml">
   
@@ -63,215 +67,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/08/AdfBcRestPerformance/" class="archive-article-date">
-  <time datetime="2017-10-08T12:58:06.000Z" itemprop="datePublished">10月 8</time>
+        <section id="main"><article id="post-OracleSoaDevMaintenanceExpSummary" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/" class="article-date">
+  <time datetime="2017-10-05T07:59:37.000Z" itemprop="datePublished">2017-10-05</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/产品/">产品</a>►<a class="article-category-link" href="/categories/技术/产品/BPM/">BPM</a>►<a class="article-category-link" href="/categories/技术/产品/SOA/">SOA</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/08/AdfBcRestPerformance/">Oracle ADF REST BC性能测试</a>
+    <h1 class="article-title" itemprop="name">
+      Oracle SOA&amp;BPM开发运维经验总结
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/08/SparkTestEnvInstallragment/" class="archive-article-date">
-  <time datetime="2017-10-08T12:38:00.000Z" itemprop="datePublished">10月 8</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/08/SparkTestEnvInstallragment/">Spark2.2集群安装概要</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/" class="archive-article-date">
-  <time datetime="2017-10-05T07:59:37.000Z" itemprop="datePublished">10月 5</time>
-</a>
+        <p><br>华为项目<br>版本：Oracle SOA v11.1.1.7<br>开发运维经验总结<br><br>  1. DBAdapter在Insert记录时，所选的Sequence是不可靠的。<br>  2. 使用while循环时，索引从1开始，不是0。<br>  3. While中循环条件设置：指向’…Collection/ObjectT[$i]’!=’null’。<br>  4. DBAdapter的命名直接取表名（对象名）即可。Invoke时可指定操作。<br>  5. DBAdapter可同时支持Select/update/merge/delete等操作，通常返回集合，在selectByKey时返回单个对象<br>  6. While的分支条件命名可以有空格，而Assign却不行。<br>  7. 在SOA运行时遇到死循环时，会以找不到对象的异常结束。<br>  8. 找不到对象的异常，不止在死循环时出现<br>  9. SOA消耗资源较大，应部署在独立的Server上，与BPM同时使用时内存最好大于15G<br>  10. 单独搭建一套实验环境，以防触发bug<br>  11. 同步/异步方法，可在Insert BPEL Process时指定<br>  12. SOA可以做多个数据库间的数据迁移，可实现单表对多表，字段转换，内容转换等操作。<br>  13. SOA做数据迁移，可避免建大量临时表，避免DBLink<br>  14. DBAdapter的JNDI name在weblogic console——&gt;部署àDBAdapter—&gt;出站连接上配置，首次配置时需要指定一个Plan.xml（部署计划）。<br>  15. 集群环境需要手动同步Plan.xml<br>  16. Assign在赋值时，即使from的collection中只有一个记录，也要指定[1]<br>  17. Update时，需要指定To的id，以确认更新的是哪条记录<br>  18. Assign的append操作不可用于String<br>  19. DBAdapter尽量使用Import Table，防止Assign时找不到schema<br>  20. 修改DBAdapter后需要重启SOA Server<br>  21. 如果使用DBProvider做Authencitator，确保可访问到weblogic用户，且处于Administrator组<br>  22. SOA服务的加载，是在SOA启动后（Server处于Running状态）逐个加载的。<br>  23. 当部署了较多SOA服务后（如50个），SOA Server的启动大概需要10分钟，加载服务10分钟。<br>  24. 切勿在服务未完全加载成功后在控制台操作SOA，会触发bug导致所有SOA无法启动，可打补丁解决。<br>  25. Oracle Support派来的人最大的优势不是更熟悉产品，而是他们有源码，可以用debug的方式查找问题。<br></p>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/">Oracle SOA&amp;BPM开发运维经验总结</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/" class="archive-article-date">
-  <time datetime="2017-10-05T07:52:54.000Z" itemprop="datePublished">10月 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/05/OracleSoaDevMaintenanceExpSummary/" data-id="cj8ist50q000548qrkcr2woiu" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/">精通一套非主流框架给我带来哪些收获</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/" class="archive-article-date">
-  <time datetime="2017-10-05T07:46:26.000Z" itemprop="datePublished">10月 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/">企业级系统到底有多复杂</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SOA/">SOA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/08/SparkTestEnvInstallragment/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Spark2.2集群安装概要
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">精通一套非主流框架给我带来哪些收获</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy5/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy5/">scala学习笔记（五）集合操作</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy6/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy6/">scala学习笔记（六）Map和Tuple</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy4/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:38.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy4/">scala学习笔记（四）流程控制</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy3/" class="archive-article-date">
-  <time datetime="2017-10-05T07:33:35.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy3/">scala学习笔记（三）Scala函数式编程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/05/scalaStudy1/" class="archive-article-date">
-  <time datetime="2017-10-05T07:23:19.000Z" itemprop="datePublished">10月 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/05/scalaStudy1/">Scala学习笔记（一）安装</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">

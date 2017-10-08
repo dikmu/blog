@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>scala学习笔记（五）集合操作 | MUHONGDI&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445object HelloArrayOps &amp;#123;  def main(args: Array[String]): Unit = &amp;#123;    //    val array = new Array[Int](5)    //">
+<meta name="keywords" content="技术,原创,Scala">
+<meta property="og:type" content="article">
+<meta property="og:title" content="scala学习笔记（五）集合操作">
+<meta property="og:url" content="http://blog.zhucai.me/2017/10/05/scalaStudy5/index.html">
+<meta property="og:site_name" content="MUHONGDI&#39;s Blog">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445object HelloArrayOps &amp;#123;  def main(args: Array[String]): Unit = &amp;#123;    //    val array = new Array[Int](5)    //">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2017-10-05T07:42:53.597Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="scala学习笔记（五）集合操作">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445object HelloArrayOps &amp;#123;  def main(args: Array[String]): Unit = &amp;#123;    //    val array = new Array[Int](5)    //">
+  
+    <link rel="alternate" href="/atom.xml" title="MUHONGDI&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MUHONGDI&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/About">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.zhucai.me"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-scalaStudy5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/scalaStudy5/" class="article-date">
+  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Scala/">Scala</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      scala学习笔记（五）集合操作
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">object HelloArrayOps &#123;</div><div class="line"></div><div class="line">  def main(args: Array[String]): Unit = &#123;</div><div class="line">    //    val array = new Array[Int](5)</div><div class="line">    //    val array = Array[Int](1,2,3,4,5)</div><div class="line">    //    val array = Array(1, 2, 3, 4, 5)</div><div class="line">    //   val array = Array.apply(1,2,3,4,5)</div><div class="line">    val array = Array(1, 2, 3, 4, 5)</div><div class="line">    array(0) = 10</div><div class="line">    for (item &lt;- array) println(item)</div><div class="line"></div><div class="line">    import scala.collection.mutable.ArrayBuffer</div><div class="line">    val arrayBuffer = new ArrayBuffer[Int]()</div><div class="line">    arrayBuffer += 1</div><div class="line">    arrayBuffer += 2</div><div class="line">    arrayBuffer += 3</div><div class="line">    arrayBuffer += (4, 5, 6, 7, 8, 9, 10)</div><div class="line">    arrayBuffer ++= Array(1, 2, 3)</div><div class="line">    arrayBuffer.insert(arrayBuffer.length - 1, 100, 1000)</div><div class="line">    for (item &lt;- arrayBuffer) println(item)</div><div class="line"></div><div class="line">    for (i &lt;- 0 until (array.length)) print(array(i) + &quot; &quot;)</div><div class="line">    println</div><div class="line">    for (i &lt;- 0 until (array.length, 2)) print(array(i) + &quot; &quot;)</div><div class="line">    println</div><div class="line">    for (i &lt;- (0 until array.length).reverse) print(array(i) + &quot; &quot;)</div><div class="line">    println</div><div class="line">    scala.util.Sorting.quickSort(array)</div><div class="line">    println(array.mkString(&quot;(&quot;, &quot;,&quot;, &quot;)&quot;))</div><div class="line">    println(array.sum)</div><div class="line">    println(array.max)</div><div class="line"></div><div class="line">    //如果想在已有数组基础的基础上，通过操作每个元素来生成新的元素，可使用yield语法来完成。</div><div class="line">    val arrayAddedOne = for (item &lt;- array) yield item + 1</div><div class="line">    println(arrayAddedOne.mkString(&quot;,&quot;))</div><div class="line"></div><div class="line">    val arrayEven = for (item &lt;- array if item % 2 == 0) yield item</div><div class="line">    println(arrayEven.mkString(&quot;,&quot;))</div><div class="line"></div><div class="line">    println(array.filter &#123; x =&gt; x % 2 == 0 &#125;.mkString(&quot; &quot;))</div><div class="line"></div><div class="line">    println(array.filter &#123; x =&gt; x % 2 == 0 &#125;.map&#123; x=&gt; x*10&#125;.mkString(&quot; &quot;))</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">继承结构</div><div class="line">1.Iterable是Trait，要求继承者实现一些共同的方法，例如遍历</div><div class="line">2.Array是一个基础数据结构，不从属scala集合体系</div><div class="line">3，集合体系中的集合分为可变集合：scala.collection.mutable._</div><div class="line">与不可变集合：scala.collection.immutable._</div><div class="line">4.List是元素的列表集合，是不可变的：</div><div class="line">1 to 10 -&gt; Range -&gt; </div><div class="line">5.List是元素的列表集合，是不可变的：</div><div class="line">  第一点：List中的head是第一个元素，tail是剩下的元素构成的新List</div><div class="line">  第二点：使用：：这个操作符来把List和其他的元素进行组拼来构建新的List</div><div class="line">print(0::list)</div><div class="line">  第三点：如果集合中没有元素的话，此时为Nil，例如List中只有一个元素，那么tail操作就会返回Nil</div><div class="line">6，LinkedList是可修改的，元素可变列表</div><div class="line">7，Set是元素不可重复的集合，且元素是无序的；HashSet中的元素不可变，且不可重复，且不能保证顺序</div><div class="line">8，LinkedHashSet会维护元素的插入顺序</div><div class="line">9，SortedSet会自动为插入的元素进行排序（1,2,3,4,5...）</div><div class="line">scala.collection.mutable.LinkedHashSet</div><div class="line">scala.collection.mutable.HashSet</div><div class="line">scala.collection.mutable.SortedSet</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy5/" data-id="cj8ist53h002l48qribaknjsn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          企业级系统到底有多复杂
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/05/scalaStudy6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">scala学习笔记（六）Map和Tuple</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/感悟/">感悟</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/">产品</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/BPM/">BPM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/SOA/">SOA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/">大数据</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/Spark/">Spark</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/">开发</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/">后端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Scala/">Scala</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/测试/">测试</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADF/">ADF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/REST/">REST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SOA/">SOA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scala/">Scala</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spark/">Spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/企业级系统/">企业级系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原创/">原创</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/大数据/">大数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感悟/">感悟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境安装/">环境安装</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ADF/" style="font-size: 10px;">ADF</a> <a href="/tags/Java/" style="font-size: 14px;">Java</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/REST/" style="font-size: 10px;">REST</a> <a href="/tags/SOA/" style="font-size: 12px;">SOA</a> <a href="/tags/Scala/" style="font-size: 16px;">Scala</a> <a href="/tags/Spark/" style="font-size: 10px;">Spark</a> <a href="/tags/企业级系统/" style="font-size: 12px;">企业级系统</a> <a href="/tags/原创/" style="font-size: 20px;">原创</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/感悟/" style="font-size: 12px;">感悟</a> <a href="/tags/技术/" style="font-size: 18px;">技术</a> <a href="/tags/环境安装/" style="font-size: 10px;">环境安装</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/08/AdfBcRestPerformance/">Oracle ADF REST BC性能测试</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/08/SparkTestEnvInstallragment/">Spark2.2集群安装概要</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/">Oracle SOA&amp;BPM开发运维经验总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/">精通一套非主流框架给我带来哪些收获</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/">企业级系统到底有多复杂</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 muhongdi@qq.com<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/About" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

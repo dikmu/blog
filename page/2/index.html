@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>MUHONGDI&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="oracle,middleware,javascript">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MUHONGDI&#39;s Blog">
+<meta property="og:url" content="http://blog.zhucai.me/page/2/index.html">
+<meta property="og:site_name" content="MUHONGDI&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MUHONGDI&#39;s Blog">
+  
+    <link rel="alternate" href="/atom.xml" title="MUHONGDI&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MUHONGDI&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/About">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.zhucai.me"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-scalaStudy2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/scalaStudy2/" class="article-date">
+  <time datetime="2017-10-05T07:23:19.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Scala/">Scala</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/scalaStudy2/">Scala学习笔记（二）Scala面向对象编程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre class="prettyprint"><p>package com.study<br><br> /**<br>  * Scala面向对象编程<br>  * <br>  * 1，在scala中类是用Class关键字<br>  * 2，可以使用new ClassName的方式构建出类的对象<br>  * 3，如果名称相同，则object中的内容都是class的静态内容，也就是说object中的内容class都可以在没有实例的时候直接去调用；<br>  * 正是因为可以再没有类的时候去调用object的一切内容，所以可以使用object中的特定方法来创建类的实例，而这个特定方法就是apply方法；<br>  * 4，object中的apply方式是class对象生成的工厂方法，用于控制对象的生成；<br>  * 5，很多框架的代码一般直接调用抽象类的object的apply方法去生成类的实例对象：<br>  * 第一：其秘诀在于apply具有类的对象生成的一切生杀大权，抽象类是不可以直接实例化的，在apply方法中可以实例化抽象类的子类，以Spark中的<br>  * 图计算为例，Graph是抽象的class，在object Graph中的apply方法实际上是调用了Grap的子类GraphImpl来构建<br>  * Graph类型的对象实例的，当然从Spark图计算的源码可以看出，GraphImpl的构造对象也是使用了object GraphImpl的apply方法；<br>  * 第二：这种方式的神奇学校应在于，更加能够应对代表版本迭代或者修改的变化，这是更高意义的面向接口编程；<br>  * 6，object HelloOOP是class HelloOOP的伴生对象，class HelloOOP可以直接访问object HelloOOP中的一切内容。<br>  *     class HelloOOP是object HelloOOP的伴生类，object HelloOOP可以直接访问class HelloOOP的一切内容，一个特例是用private[this]修饰的成员。<br>  * <br>  * 7，在定义Scala的Class的时候，可以直接在类名后面（）里加入类的构造参数，此时在apply方法中也必须有这些参数<br>  * 8，Scala中可以在object中提供多个构造方法<br>  */<br>class HelloOOP(age:Int){<br>  var name="Spark"<br>  def sayHello=println("Hi,My name is "+name+" I am "+ age + "years old")<br>  println(sayHello)<br>} <br><br>object HelloOOP {<br>  var number=0<br><br>  def main(args: Array[String]): Unit = {<br>    var helloOOP=HelloOOP()<br>    helloOOP.sayHello<br>  }<br>  <br>  <br>  def apply():HelloOOP={<br>    new HelloOOP(10)<br>  }<br>  <br>  def apply(age:Int ):HelloOOP={<br>    new HelloOOP(age)<br>  }<br>}</p></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy2/" data-id="cj8ist537002d48qrhdrtarxy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/04/hello-world/" class="article-date">
+  <time datetime="2017-10-04T14:01:20.077Z" itemprop="datePublished">2017-10-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/04/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/04/hello-world/" data-id="cj8ist510000948qr6n8v2vqq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javaCore2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/11/javaCore2/" class="article-date">
+  <time datetime="2017-09-11T03:47:04.000Z" itemprop="datePublished">2017-09-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/11/javaCore2/">Java核心要点（2）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.作用域可见性<wbr><div><table width="80%" border="1" cellpadding="1" cellspacing="1"><tbody><tr><td>&nbsp;visibility</td><td>Classes&nbsp;</td><td>Method &amp; variables&nbsp;</td><td>Inner Class&nbsp;</td></tr><tr><td>Private&nbsp;</td><td>N/A&nbsp;</td><td>本Class可见&nbsp;</td><td>&nbsp;本Class可见</td></tr><tr><td>&nbsp;Default</td><td>同package可见</td><td>同package可见&nbsp;</td><td>&nbsp;同package可见</td></tr><tr><td>&nbsp;Protected</td><td>N/A&nbsp;</td><td>同package可见+继承可见&nbsp;</td><td>同package可见+继承可见&nbsp;</td></tr><tr><td>&nbsp;Public</td><td>Any package&nbsp;</td><td>任何地方都可见&nbsp;</td><td>&nbsp;任何地方都可见</td></tr></tbody></table>&nbsp; &nbsp;</div><div>2.内部类的调用</div><div>Outter outter=new Outter()</div><div>Outter.Inner inner=new outter.new Inner()</div><div><br></div><div>3.运算时 i=x+y &nbsp; &nbsp;左值由空间保障，右值没有空间保障</div><div>4.y=x++ &nbsp;vs &nbsp; y=++x &nbsp; &nbsp; 前一种会引入一个tmp变量来保存中间数，后一种不会，推荐使用后者</div><div>5.if(x&lt;0 &amp; ++x&gt;0) ….</div><div>&nbsp; &nbsp;if(boolean &amp; boolean) …. and操作，会执行左右两端</div><div>&nbsp; &nbsp;if(boolean &amp;&amp; boolean) …. shortcut and操作，只执行一端</div><div>&nbsp; &nbsp;if(boolean | boolean) …. （待验证）</div><div>&nbsp; &nbsp;if(boolean || boolean) …. （待验证）</div><div>6.for while上面可加label</div><div><span style="white-space:pre;">    </span>AAA：</div><div><span style="white-space:pre;">    </span>for…. continue AAA; &nbsp; break AAA;</div><div><br></div><div>7.Java异常继承结构</div><div><span style="white-space:pre;">            </span>Throwable &nbsp;&nbsp;</div><div>Error &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Exception</div><div><span style="white-space:pre;">        </span>&nbsp; |<span style="white-space:pre;">    </span>RunTimeException</div>JVM态<span style="white-space:pre;">    </span>&nbsp; | &nbsp;&nbsp;<span style="white-space:pre;">    </span>用户态<div>因此所有异常都可catch(Throwable e)</div><div><br></div><div>8.checked Exception 需要提前try catch</div><div><span style="white-space:pre;">    </span>unchecked Exception 不需要提前try catch</div></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/09/11/javaCore2/" data-id="cj8ist530002848qr7g1sz3cd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javaCore1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/11/javaCore1/" class="article-date">
+  <time datetime="2017-09-11T03:18:20.000Z" itemprop="datePublished">2017-09-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/11/javaCore1/">Java核心要点（1）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br>1.JDK的tools有许多工具是不允许分发的授权，JRE是可分发的<br>2.Java是解释型语言，解释一步执行一步<br>3.基于上一条，IDE中调试时，可动态修改代码<br>4.运行过的.class会生成c语言代码，下次执行时不再编译<br>5.jar包的格式=zip包，两者是一样的<br>6.Java所有的函数和变量都属于类——面向对象<br>7.一个类文件，只能有一个public级别的class<br>8.一种main方法返回方式：System.exit(255);<br>9.所有Object都在heap（栈）中；<br>    String str=new String(“abc”);//str作为变量名，会保存在栈中<br>    Int i=10;//i作为变量名，会保存在栈中<br>    func(str);//这里传入的str是指针<br>10.CPU架构可分为Sparc Sun Intel AT&amp;T ‘IBM Power’ Motorola<br>11.不同位数对应的存储空间<br>    32bit:2^32 4G    64bit: 2^64<br>    32bit下 2G kernel use，2G user use<br>    Windows下，内存使用1.6G后，随时可能出现问题：core dump<br>12.寻址空间<br>    Windows  1.6G    大于1.6G后，随时可能出现问题：core dump<br>    Solaris   2G<br>    Linux     3G<br>13.接口的用途：类实现了哪些接口，就可以跟哪些接口打交道，一个类可以具有多个面孔(接口)<br>14.方法前加final是指继承时不许override<br>15.关于默认值<br>    局部变量   N/A   编译不通过<br>    全局变量      0、0.00、null、false   取决于类型<br>    全局数组      0、0.00、null、false   取决于类型<br>    局部数组      0、0.00、null、false   取决于类型<br>    局部数组半初始化    N/A<br>16.字节对齐    C++概念，Java无此概念<br>17.字节序    与编译器CPU架构有关    BigEndian   (待完善)<br>18.Java中存储长度：<br>    byte 8bit        short 16        int&amp;float 32        double&amp;long 64<br>19.数组提供工具类 java.util.Arrays，提供排序 查找 打印等功能<br>20.class前加final，则不许被继承<br></p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/09/11/javaCore1/" data-id="cj8ist512000a48qrbvmyzv6z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/感悟/">感悟</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/">产品</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/BPM/">BPM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/SOA/">SOA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/">大数据</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/Spark/">Spark</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/">开发</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/">后端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Scala/">Scala</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/测试/">测试</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADF/">ADF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/REST/">REST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SOA/">SOA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scala/">Scala</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spark/">Spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/企业级系统/">企业级系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原创/">原创</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/大数据/">大数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感悟/">感悟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境安装/">环境安装</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ADF/" style="font-size: 10px;">ADF</a> <a href="/tags/Java/" style="font-size: 14px;">Java</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/REST/" style="font-size: 10px;">REST</a> <a href="/tags/SOA/" style="font-size: 12px;">SOA</a> <a href="/tags/Scala/" style="font-size: 16px;">Scala</a> <a href="/tags/Spark/" style="font-size: 10px;">Spark</a> <a href="/tags/企业级系统/" style="font-size: 12px;">企业级系统</a> <a href="/tags/原创/" style="font-size: 20px;">原创</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/感悟/" style="font-size: 12px;">感悟</a> <a href="/tags/技术/" style="font-size: 18px;">技术</a> <a href="/tags/环境安装/" style="font-size: 10px;">环境安装</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/08/AdfBcRestPerformance/">Oracle ADF REST BC性能测试</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/08/SparkTestEnvInstallragment/">Spark2.2集群安装概要</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/OracleSoaDevMaintenanceExpSummary/">Oracle SOA&amp;BPM开发运维经验总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/">精通一套非主流框架给我带来哪些收获</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/">企业级系统到底有多复杂</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 muhongdi@qq.com<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/About" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
