@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>使用Python编写博客自动转发系统 | 光帆1024</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一直想用python做个什么，正巧最近在搭建基于hexo+github的博客，但这套基于markdown的编辑器在图片的支持上不是很友好，所以转发文章成了大问题。 下文为笔者开发的一个python小程序，可以实现如下功能：  通过python的BeautifulSoup解析html中的图片信息 自动下载图片到本地磁盘，并生成新的文件名（uuid） 自动上传图片到七牛云服务的对象存储中 替换html">
+<meta name="keywords" content="oracle,middleware,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Python编写博客自动转发系统">
+<meta property="og:url" content="http://blog.zhucai.me/2017/10/11/UsePythonAutoBlogLoad/index.html">
+<meta property="og:site_name" content="光帆1024">
+<meta property="og:description" content="一直想用python做个什么，正巧最近在搭建基于hexo+github的博客，但这套基于markdown的编辑器在图片的支持上不是很友好，所以转发文章成了大问题。 下文为笔者开发的一个python小程序，可以实现如下功能：  通过python的BeautifulSoup解析html中的图片信息 自动下载图片到本地磁盘，并生成新的文件名（uuid） 自动上传图片到七牛云服务的对象存储中 替换html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2017-10-10T18:11:07.564Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Python编写博客自动转发系统">
+<meta name="twitter:description" content="一直想用python做个什么，正巧最近在搭建基于hexo+github的博客，但这套基于markdown的编辑器在图片的支持上不是很友好，所以转发文章成了大问题。 下文为笔者开发的一个python小程序，可以实现如下功能：  通过python的BeautifulSoup解析html中的图片信息 自动下载图片到本地磁盘，并生成新的文件名（uuid） 自动上传图片到七牛云服务的对象存储中 替换html">
+  
+    <link rel="alternate" href="/atom.xml" title="光帆1024" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">光帆1024</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">——探索技术的力量</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/categories/项目案例/">项目案例</a>
+        
+          <a class="main-nav-link" href="/2017/10/08/About/">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.zhucai.me"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-UsePythonAutoBlogLoad" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/11/UsePythonAutoBlogLoad/" class="article-date">
+  <time datetime="2017-10-10T17:52:23.000Z" itemprop="datePublished">2017-10-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用Python编写博客自动转发系统
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一直想用python做个什么，正巧最近在搭建基于hexo+github的博客，但这套基于markdown的编辑器在图片的支持上不是很友好，所以转发文章成了大问题。</p>
+<p>下文为笔者开发的一个python小程序，可以实现如下功能：</p>
+<ul>
+<li>通过python的BeautifulSoup解析html中的图片信息</li>
+<li>自动下载图片到本地磁盘，并生成新的文件名（uuid）</li>
+<li>自动上传图片到七牛云服务的对象存储中</li>
+<li>替换html中的图片路径信息为，云链接</li>
+<li>将新的html写入output.txt路径中</li>
+</ul>
+<p>使用方法：</p>
+<ul>
+<li>使用firefox打开网页，通过控制台找到想要截取的html片段，并复制html</li>
+<li>目前发现chrome功能过于强大，图片格式支持超前，导致图片在其他浏览器无法显示，因此不能使用chrome</li>
+<li>将html复制到input.txt中</li>
+<li>运行python程序</li>
+<li>将新的html从output.txt中复制出来，并粘贴到hexo的博客文章中</li>
+<li>由于此html具备原文的个是信息，因此新的文章也具有该格式信息</li>
+<li>发布hexo即可</li>
+</ul>
+<p>python代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">Created on Tue Oct 10 06:59:10 2017</span></div><div class="line"><span class="string">1.下载input.txt中所有img对应的图片</span></div><div class="line"><span class="string">2.替换img的图片地址为基础路径地址，并生成一个新的文件名</span></div><div class="line"><span class="string">3.将含有新文件名及其路径的img信息，写入output.txt文件</span></div><div class="line"><span class="string">*不要从chrome中复制html片段</span></div><div class="line"><span class="string">@author: muhongdi@qq.com</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div><div class="line"><span class="keyword">import</span> requests,os,uuid</div><div class="line"><span class="keyword">from</span> qiniu <span class="keyword">import</span> Auth, put_file, etag, urlsafe_base64_encode</div><div class="line"><span class="keyword">import</span> qiniu.config</div><div class="line"><span class="keyword">from</span> qiniu <span class="keyword">import</span> BucketManager</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">html_decode</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line"><span class="string">    Returns the ASCII decoded version of the given HTML string. This does</span></div><div class="line"><span class="string">    NOT remove normal HTML tags like &lt;p&gt;.</span></div><div class="line"><span class="string">    """</span></div><div class="line">    htmlCodes = (</div><div class="line">            (<span class="string">"'"</span>, <span class="string">'&amp;#39;'</span>),</div><div class="line">            (<span class="string">'"'</span>, <span class="string">'&amp;quot;'</span>),</div><div class="line">            (<span class="string">'&gt;'</span>, <span class="string">'&amp;gt;'</span>),</div><div class="line">            (<span class="string">'&lt;'</span>, <span class="string">'&amp;lt;'</span>),</div><div class="line">            (<span class="string">'&amp;'</span>, <span class="string">'&amp;amp;'</span>)</div><div class="line">        )</div><div class="line">    <span class="keyword">for</span> code <span class="keyword">in</span> htmlCodes:</div><div class="line">        s = s.replace(code[<span class="number">1</span>], code[<span class="number">0</span>])</div><div class="line">    <span class="keyword">return</span> s</div><div class="line"></div><div class="line"><span class="comment">#初始化云存储</span></div><div class="line">access_key = <span class="string">'...........七牛云ak...........'</span></div><div class="line">secret_key = <span class="string">'...........七牛云sk...........'</span></div><div class="line"><span class="comment">#初始化Auth状态</span></div><div class="line">q = Auth(access_key, secret_key)</div><div class="line"><span class="comment">#初始化BucketManager</span></div><div class="line">bucket = BucketManager(q)</div><div class="line"><span class="comment">#你要测试的空间， 并且这个key在你空间中存在</span></div><div class="line">bucket_name = <span class="string">''</span>...........七牛云bucket name...........<span class="string">''</span></div><div class="line"></div><div class="line"><span class="comment"># 设置基础路径 例如你的七牛外链</span></div><div class="line">newImgSrc = <span class="string">'http://xxxxxxx.bkt.clouddn.com/'</span></div><div class="line"></div><div class="line"><span class="comment"># 打开一个文件</span></div><div class="line">inputFile = open(<span class="string">"./input.txt"</span>,<span class="string">"r"</span>)</div><div class="line">html = inputFile.read()</div><div class="line">html = html_decode(html)</div><div class="line">soup = BeautifulSoup( html, <span class="string">'html.parser'</span>)</div><div class="line"></div><div class="line">print(<span class="string">"------------Reading input.txt---------------"</span>)</div><div class="line">print(html)</div><div class="line">print(<span class="string">"------------END Reading input.txt---------------"</span>)</div><div class="line"></div><div class="line">imgs = soup.find_all(<span class="string">'img'</span>)</div><div class="line"></div><div class="line">dir = <span class="string">'./tmp/'</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">for</span> img <span class="keyword">in</span> imgs:</div><div class="line">    imgSrc = img.get(<span class="string">'src'</span>)</div><div class="line">    </div><div class="line">    print(<span class="string">"--------------dealing image : "</span> + imgSrc+<span class="string">"--------------"</span>)</div><div class="line">    imgName = os.path.basename(imgSrc)</div><div class="line">    <span class="comment">#New File name</span></div><div class="line">    newFileName = uuid.uuid4().hex</div><div class="line">    <span class="comment">#处理扩展名</span></div><div class="line">    <span class="keyword">if</span> len(imgName.split(<span class="string">'.'</span>)) &gt; <span class="number">1</span>:</div><div class="line">        newFileName += <span class="string">"."</span>+imgName.split(<span class="string">'.'</span>)[<span class="number">1</span>]</div><div class="line">    <span class="comment">#else:</span></div><div class="line">    <span class="comment">#    newFileName +=".jpg"</span></div><div class="line">        </div><div class="line">    print(<span class="string">"generate new image name :"</span>+newFileName)</div><div class="line">    <span class="comment">#下载图片</span></div><div class="line">    print(<span class="string">"downloading image "</span>)</div><div class="line">    response = requests.get(img.get(<span class="string">'src'</span>))</div><div class="line">    <span class="comment">#写入磁盘</span></div><div class="line">    print(<span class="string">"writing image to disk"</span>)</div><div class="line">    imageFile = open(dir + newFileName,<span class="string">"wb"</span>)</div><div class="line">    <span class="keyword">for</span> chunk <span class="keyword">in</span> response.iter_content(<span class="number">100000</span>):</div><div class="line">        imageFile.write(chunk)</div><div class="line">    imageFile.close()</div><div class="line">    <span class="comment">#修改图片链接</span></div><div class="line">    <span class="comment">#img['src']= newImgSrc + newFileName</span></div><div class="line">    html=html.replace(imgSrc , newImgSrc + newFileName).replace(img.get(<span class="string">'data-src'</span>) , newImgSrc + newFileName)</div><div class="line">    </div><div class="line">    <span class="comment">#upload image</span></div><div class="line">    <span class="comment">#生成上传 Token，可以指定过期时间等</span></div><div class="line">    print(<span class="string">"uploading image"</span>)</div><div class="line">    token = q.upload_token(bucket_name, newFileName, <span class="number">3600</span>)</div><div class="line">    localfile = dir + newFileName</div><div class="line">    ret, info = put_file(token, newFileName, localfile,mime_type=<span class="string">'image/jpeg'</span>)</div><div class="line">    <span class="comment"># 将一个文件的元信息修改为jpg</span></div><div class="line">    <span class="comment">#bucket.change_mime(bucket_name, newFileName, 'image/jpg')</span></div><div class="line">    <span class="keyword">assert</span> ret[<span class="string">'key'</span>] == newFileName</div><div class="line">    <span class="keyword">assert</span> ret[<span class="string">'hash'</span>] == etag(localfile)</div><div class="line">    print(<span class="string">"---------------dealing "</span> + imgSrc + <span class="string">" done--------------------------"</span>)</div><div class="line">    </div><div class="line">print(<span class="string">'---------------------Writing html to output.txt---------------------'</span>)</div><div class="line">outputFile = open(<span class="string">"./output.txt"</span>,<span class="string">"w"</span>,encoding=<span class="string">'utf-8'</span>)</div><div class="line">outputFile.write(html)</div><div class="line">outputFile.close</div><div class="line">print(<span class="string">'Success.'</span>)</div></pre></td></tr></table></figure></p>
+<p>由于本人初学python，以上代码写的质量一般在所难免。如使用过程中有任何问题可随时联系我</p>
+<p>有大量的python初始环境安装，本人已安装过tensorflow，环境已经具备各种类库，这里不再列出安装过程</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/11/UsePythonAutoBlogLoad/" data-id="cj8pwpi800012l0qr5gpuvwyh" class="article-share-link">Поделиться</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/11/DockerOracleTech/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Следующий</strong>
+      <div class="article-nav-title">
+        
+          Docker+甲骨文中间件—为企业应用插上翅膀
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/11/MicroServiceAndOracleTech/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Предыдущий</strong>
+      <div class="article-nav-title">微服务架构探讨及甲骨文中间件微服务技术解决方案</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Категории</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/">兴趣爱好</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/3D打印/">3D打印</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/国学/">国学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/国学/中医养生/">中医养生</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/生物识别/">生物识别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/自动驾驶/">自动驾驶</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/自然科学/">自然科学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/自然科学/多维宇宙/">多维宇宙</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/自然科学/量子/">量子</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/">产品</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/BPM/">BPM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/Nosql/">Nosql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/OSB/">OSB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/SOA/">SOA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/云/">云</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/分布式缓存/">分布式缓存</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/">大数据</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/Spark/">Spark</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/安全-身份管理/">安全+身份管理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/容器/">容器</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/流程/">流程</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/实施/">实施</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/">开发</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/全端/">全端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/全端/ADF/">ADF</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/其它/">其它</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/">后端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Scala/">Scala</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/数据库/">数据库</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/">服务器端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/Scala/">Scala</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/Spring/">Spring</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/移动端/">移动端</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/智能/">智能</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/智能/Tensorflow/">Tensorflow</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/智能/基础算法/">基础算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/智能/现代算法/">现代算法</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/架构/">架构</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/架构/安全/">安全</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/架构/环境/">环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/架构/集成/">集成</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/规划/">规划</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/规划/人-财/">人+财</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/规划/协作方式/">协作方式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/规划/规范-培训/">规范+培训</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/设计/">设计</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/">运维</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/云/">云</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/容器/">容器</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/数据库/">数据库</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目案例/">项目案例</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Метки</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADF/">ADF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jdeveloper/">Jdeveloper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenStack/">OpenStack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RBAC/">RBAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/REST/">REST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SOA/">SOA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scala/">Scala</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spark/">Spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tensorflow/">Tensorflow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中间件/">中间件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云/">云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/企业级系统/">企业级系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存计算/">内存计算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式缓存/">分布式缓存</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原创/">原创</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/大数据/">大数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/容器/">容器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/建模/">建模</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源/">开源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/性能，原创/">性能，原创</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境安装/">环境安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/转载/">转载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目案例/">项目案例</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/驻才网/">驻才网</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Облако меток</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ADF/" style="font-size: 17.78px;">ADF</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Java/" style="font-size: 14.44px;">Java</a> <a href="/tags/Jdeveloper/" style="font-size: 10px;">Jdeveloper</a> <a href="/tags/OpenStack/" style="font-size: 10px;">OpenStack</a> <a href="/tags/Oracle/" style="font-size: 18.89px;">Oracle</a> <a href="/tags/RBAC/" style="font-size: 10px;">RBAC</a> <a href="/tags/REST/" style="font-size: 10px;">REST</a> <a href="/tags/SOA/" style="font-size: 13.33px;">SOA</a> <a href="/tags/Scala/" style="font-size: 15.56px;">Scala</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Spark/" style="font-size: 10px;">Spark</a> <a href="/tags/Tensorflow/" style="font-size: 10px;">Tensorflow</a> <a href="/tags/中间件/" style="font-size: 13.33px;">中间件</a> <a href="/tags/云/" style="font-size: 10px;">云</a> <a href="/tags/企业级系统/" style="font-size: 15.56px;">企业级系统</a> <a href="/tags/内存计算/" style="font-size: 10px;">内存计算</a> <a href="/tags/分布式缓存/" style="font-size: 11.11px;">分布式缓存</a> <a href="/tags/前端/" style="font-size: 12.22px;">前端</a> <a href="/tags/原创/" style="font-size: 20px;">原创</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/容器/" style="font-size: 10px;">容器</a> <a href="/tags/建模/" style="font-size: 10px;">建模</a> <a href="/tags/开源/" style="font-size: 10px;">开源</a> <a href="/tags/微服务/" style="font-size: 11.11px;">微服务</a> <a href="/tags/性能，原创/" style="font-size: 10px;">性能，原创</a> <a href="/tags/技术/" style="font-size: 18.89px;">技术</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/环境安装/" style="font-size: 10px;">环境安装</a> <a href="/tags/转载/" style="font-size: 14.44px;">转载</a> <a href="/tags/随笔/" style="font-size: 11.11px;">随笔</a> <a href="/tags/项目案例/" style="font-size: 16.67px;">项目案例</a> <a href="/tags/驻才网/" style="font-size: 10px;">驻才网</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Архив</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">十一月 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">六月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">十月 2011</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Недавние записи</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/13/于RBAC的安全系统用例图/">基于RBAC的安全系统用例图</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/13/布式缓存用户信息/">分布式缓存用户信息</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/13/eveloper-Java建模工具研究/">Jdeveloper自带的免费Java建模工具</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/13/enstack安装过程概要/">Openstack安装过程概要</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/11/ogTimeStoneRecord/">网站建设进展</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 muhongdi@qq.com<br>
+      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/categories/项目案例/" class="mobile-nav-link">项目案例</a>
+  
+    <a href="/2017/10/08/About/" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
