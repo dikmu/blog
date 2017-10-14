@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhucai.me/"/>
-  <updated>2017-10-13T13:09:43.130Z</updated>
+  <updated>2017-10-14T08:07:57.325Z</updated>
   <id>http://blog.zhucai.me/</id>
   
   <author>
@@ -15,6 +15,178 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ADF技术介绍</title>
+    <link href="http://blog.zhucai.me/2017/10/13/DF%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://blog.zhucai.me/2017/10/13/DF技术介绍/</id>
+    <published>2017-10-13T14:51:00.000Z</published>
+    <updated>2017-10-14T08:07:57.325Z</updated>
+    
+    <content type="html"><![CDATA[<p>ADF到底优秀在哪里，当大家还在关心是选择Java，Jsp，Html5等语言作为开发技术的时候，你已经可以通过一套完善的技术体系直接做出产品了。</p><p>整体介绍<br><div class="row">    <embed src="http://oxb319f0v.bkt.clouddn.com/%E7%BA%B5%E8%A7%88ADF.pdf" width="100%" height="550" type="application/pdf"></div></p><p>ADF开发过程：<br><a href="http://docs.oracle.com/cd/E37547_01/tutorials/tut_rich_app/tut_rich_app.html" target="_blank" rel="external">http://docs.oracle.com/cd/E37547_01/tutorials/tut_rich_app/tut_rich_app.html</a></p><p>最新Alta UI<br><a href="http://www.oracle.com/webfolder/ux/middleware/alta/index.html" target="_blank" rel="external">http://www.oracle.com/webfolder/ux/middleware/alta/index.html</a></p><p>Workbetter Demo<br><a href="http://jdevadf.oracle.com/workbetter/faces/index.jsf" target="_blank" rel="external">http://jdevadf.oracle.com/workbetter/faces/index.jsf</a></p><p>免费版本介绍<br><a href="http://www.oracle.com/technetwork/developer-tools/adf/overview/adfessentials-1719844.html" target="_blank" rel="external">http://www.oracle.com/technetwork/developer-tools/adf/overview/adfessentials-1719844.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;ADF到底优秀在哪里，当大家还在关心是选择Java，Jsp，Html5等语言作为开发技术的时候，你已经可以通过一套完善的技术体系直接做出产品了。&lt;/p&gt;
+&lt;p&gt;整体介绍&lt;br&gt;
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;http://oxb31
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="开发" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="全端" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/%E5%85%A8%E7%AB%AF/"/>
+    
+      <category term="ADF" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/%E5%85%A8%E7%AB%AF/ADF/"/>
+    
+    
+      <category term="ADF" scheme="http://blog.zhucai.me/tags/ADF/"/>
+    
+      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Developing and Securing RESTful Web Services</title>
+    <link href="http://blog.zhucai.me/2017/10/13/eveloping-and-Securing-RESTful-Web-Services/"/>
+    <id>http://blog.zhucai.me/2017/10/13/eveloping-and-Securing-RESTful-Web-Services/</id>
+    <published>2017-10-13T14:29:00.000Z</published>
+    <updated>2017-10-13T14:41:17.102Z</updated>
+    
+    <content type="html"><![CDATA[<p>1 Introduction to RESTful Web Services<br><br>2 Developing RESTful Web Services<br><br>3 Developing RESTful Web Service Clients<br><br>4 Packaging and Deploying RESTful Web Services<br><br>5 Securing RESTful Web Services and Clients<br><br>6 Testing RESTful Web Services<br><br>7 Monitoring RESTful Web Services and Clients<br><br>A Updating the Version of Jersey JAX-RS RI<br></p><div class="row">    <embed src="http://docs.oracle.com/middleware/1212/wls/RESTF.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1 Introduction to RESTful Web Services&lt;br&gt;&lt;br&gt;2 Developing RESTful Web Services&lt;br&gt;&lt;br&gt;3 Developing RESTful Web Service Clients&lt;br&gt;&lt;br&gt;4 
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="架构" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="集成" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E6%9E%B6%E6%9E%84/%E9%9B%86%E6%88%90/"/>
+    
+    
+      <category term="Java" scheme="http://blog.zhucai.me/tags/Java/"/>
+    
+      <category term="ADF" scheme="http://blog.zhucai.me/tags/ADF/"/>
+    
+      <category term="REST" scheme="http://blog.zhucai.me/tags/REST/"/>
+    
+      <category term="转载" scheme="http://blog.zhucai.me/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ADF Essentials免费版本研究</title>
+    <link href="http://blog.zhucai.me/2017/10/13/DF-Essentials%E5%85%8D%E8%B4%B9%E7%89%88%E6%9C%AC%E7%A0%94%E7%A9%B6/"/>
+    <id>http://blog.zhucai.me/2017/10/13/DF-Essentials免费版本研究/</id>
+    <published>2017-10-13T14:15:00.000Z</published>
+    <updated>2017-10-13T14:23:42.463Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="官网介绍很短"><a href="#官网介绍很短" class="headerlink" title="官网介绍很短"></a>官网介绍很短</h2><h4 id="ADF-Essentials"><a href="#ADF-Essentials" class="headerlink" title="ADF Essentials"></a>ADF Essentials<br></h4><p>Faster and Simpler Java-based Application Development - Now Free<br>Oracle ADF Essentials is an end-to-end Java EE framework that simplifies application development by providing out-of-the-box infrastructure services and a visual and declarative development experience. Oracle ADF Essentials is free to develop and deploy.</p><p>大意是目前最快的开发框架ADF免费了。<br><br>ADF Essentials版本是一个端到端的Java EE开发框架，可简化应用开发。</p><p>这个版本早就有了，但部署开源容器和数据库一直有问题，今天再试一下</p><ul><li>数据库使用MySQL</li><li>容器使用GlassFish先</li><li>以下操作基于认证信息：<a href="http://www.oracle.com/technetwork/developer-tools/jdev/documentation/121300-cert-2164864.html" target="_blank" rel="external">http://www.oracle.com/technetwork/developer-tools/jdev/documentation/121300-cert-2164864.html</a></li></ul><h4 id="验证结果"><a href="#验证结果" class="headerlink" title="验证结果"></a>验证结果</h4><p>可用ADF连接MySQL，连接时选择SQL92<br><br>使用MySQL自带的表结构，可顺利实现基本功能<br><img src="http://oxb319f0v.bkt.clouddn.com/1507904276631zwnviw1r.png?imageslim" alt="paste image"></p><p>以下是测试通过的功能：</p><ul><li>新建BC层</li><li>Test by AM</li><li>增删改查界面</li><li>可为子VO新建记录，并默认与主VO记录关联</li><li>支持ViewCriteria</li><li>主从关系联动</li></ul><p>以下不支持</p><ul><li>Table 自带filter不支持字符串过滤，但支持数字</li><li>数据库模型图尚无法新建外键</li><li>Glassfish的部署比较复杂，主要是jar包的引入</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;官网介绍很短&quot;&gt;&lt;a href=&quot;#官网介绍很短&quot; class=&quot;headerlink&quot; title=&quot;官网介绍很短&quot;&gt;&lt;/a&gt;官网介绍很短&lt;/h2&gt;&lt;h4 id=&quot;ADF-Essentials&quot;&gt;&lt;a href=&quot;#ADF-Essentials&quot; class=&quot;
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="开发" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="全端" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/%E5%85%A8%E7%AB%AF/"/>
+    
+      <category term="ADF" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/%E5%85%A8%E7%AB%AF/ADF/"/>
+    
+    
+      <category term="ADF" scheme="http://blog.zhucai.me/tags/ADF/"/>
+    
+      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="开源" scheme="http://blog.zhucai.me/tags/%E5%BC%80%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华为项目案例</title>
+    <link href="http://blog.zhucai.me/2017/10/13/%E4%B8%BA%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B/"/>
+    <id>http://blog.zhucai.me/2017/10/13/为项目案例/</id>
+    <published>2017-10-13T13:20:00.000Z</published>
+    <updated>2017-10-13T13:30:28.265Z</updated>
+    
+    <content type="html"><![CDATA[<p>项目组总SE（架构师），负责多个项目的技术解决、技术管理及培训(&gt;30人)。</p><ul><li>独立负责【流程平台】开发运维，基于Oracle BPM/SOA/OSB/ADF等技术，支撑3个业务系统。</li><li>涉及多Linux运维,Weblogic集群配置搭建,中间件安装管理,同时涉及数据库的数据管理、运维、分区等DBA职责。</li><li>负责【全球-本地会计系统】的架构搭建、前后端分离技术规划与研发、开发团队管理。</li><li>负责基于Spring、SpringBoot技术的基础框架搭建。</li><li>负责对接华为权限集成、data集成、人员集成、工号切换等特有业务方案。</li><li>负责新旧系统数据大规模数据迁移方案的实现。</li></ul><p>给华为做项目什么资料都拿不出来，先留个位置想起来什么补什么…..</p><p>还是看看别的案例吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;项目组总SE（架构师），负责多个项目的技术解决、技术管理及培训(&amp;gt;30人)。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;独立负责【流程平台】开发运维，基于Oracle BPM/SOA/OSB/ADF等技术，支撑3个业务系统。&lt;/li&gt;
+&lt;li&gt;涉及多Linux运维,Weblogic集
+      
+    
+    </summary>
+    
+      <category term="项目案例" scheme="http://blog.zhucai.me/categories/%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>分布式缓存用户信息</title>
+    <link href="http://blog.zhucai.me/2017/10/13/%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF/"/>
+    <id>http://blog.zhucai.me/2017/10/13/布式缓存用户信息/</id>
+    <published>2017-10-13T12:53:53.000Z</published>
+    <updated>2017-10-13T13:11:07.593Z</updated>
+    
+    <content type="html"><![CDATA[<p>用户信息在系统中属于需要频繁读取的数据，无论是安全，还是关联数据处理。<br>下面是一个在服务器启动后，自动从数据看加载用户信息的场景。</p><div class="row">    <embed src="http://oxb319f0v.bkt.clouddn.com/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;用户信息在系统中属于需要频繁读取的数据，无论是安全，还是关联数据处理。&lt;br&gt;下面是一个在服务器启动后，自动从数据看加载用户信息的场景。&lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;http://oxb319f0v.bkt.cloudd
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="产品" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="分布式缓存" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E4%BA%A7%E5%93%81/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/"/>
+    
+    
+      <category term="Java" scheme="http://blog.zhucai.me/tags/Java/"/>
+    
+      <category term="ADF" scheme="http://blog.zhucai.me/tags/ADF/"/>
+    
+      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="项目案例" scheme="http://blog.zhucai.me/tags/%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>基于RBAC的安全系统用例图</title>
@@ -50,45 +222,6 @@
   </entry>
   
   <entry>
-    <title>分布式缓存用户信息</title>
-    <link href="http://blog.zhucai.me/2017/10/13/%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF/"/>
-    <id>http://blog.zhucai.me/2017/10/13/布式缓存用户信息/</id>
-    <published>2017-10-13T12:53:53.000Z</published>
-    <updated>2017-10-13T13:11:07.593Z</updated>
-    
-    <content type="html"><![CDATA[<p>用户信息在系统中属于需要频繁读取的数据，无论是安全，还是关联数据处理。<br>下面是一个在服务器启动后，自动从数据看加载用户信息的场景。</p><div class="row">    <embed src="http://oxb319f0v.bkt.clouddn.com/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;用户信息在系统中属于需要频繁读取的数据，无论是安全，还是关联数据处理。&lt;br&gt;下面是一个在服务器启动后，自动从数据看加载用户信息的场景。&lt;/p&gt;
-
-
-	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;http://oxb319f0v.bkt.cloudd
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="产品" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E4%BA%A7%E5%93%81/"/>
-    
-      <category term="分布式缓存" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E4%BA%A7%E5%93%81/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98/"/>
-    
-    
-      <category term="Java" scheme="http://blog.zhucai.me/tags/Java/"/>
-    
-      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="ADF" scheme="http://blog.zhucai.me/tags/ADF/"/>
-    
-      <category term="项目案例" scheme="http://blog.zhucai.me/tags/%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Jdeveloper自带的免费Java建模工具</title>
     <link href="http://blog.zhucai.me/2017/10/13/eveloper-Java%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7%E7%A0%94%E7%A9%B6/"/>
     <id>http://blog.zhucai.me/2017/10/13/eveloper-Java建模工具研究/</id>
@@ -114,9 +247,9 @@
     
       <category term="Java" scheme="http://blog.zhucai.me/tags/Java/"/>
     
-      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
-    
       <category term="ADF" scheme="http://blog.zhucai.me/tags/ADF/"/>
+    
+      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
     
       <category term="Jdeveloper" scheme="http://blog.zhucai.me/tags/Jdeveloper/"/>
     
@@ -424,13 +557,13 @@
       <category term="AI" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E4%BA%A7%E5%93%81/AI/"/>
     
     
-      <category term="技术" scheme="http://blog.zhucai.me/tags/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
     
       <category term="Tensorflow" scheme="http://blog.zhucai.me/tags/Tensorflow/"/>
     
       <category term="AI" scheme="http://blog.zhucai.me/tags/AI/"/>
+    
+      <category term="技术" scheme="http://blog.zhucai.me/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -490,11 +623,11 @@
     
       <category term="SOA" scheme="http://blog.zhucai.me/tags/SOA/"/>
     
-      <category term="前端" scheme="http://blog.zhucai.me/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="测试" scheme="http://blog.zhucai.me/tags/%E6%B5%8B%E8%AF%95/"/>
     
       <category term="性能，原创" scheme="http://blog.zhucai.me/tags/%E6%80%A7%E8%83%BD%EF%BC%8C%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="前端" scheme="http://blog.zhucai.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -566,139 +699,11 @@
       <category term="BPM" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E4%BA%A7%E5%93%81/BPM/"/>
     
     
-      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
-    
       <category term="SOA" scheme="http://blog.zhucai.me/tags/SOA/"/>
     
+      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
+    
       <category term="Oracle" scheme="http://blog.zhucai.me/tags/Oracle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>精通一套非主流框架给我带来哪些收获</title>
-    <link href="http://blog.zhucai.me/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/"/>
-    <id>http://blog.zhucai.me/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/</id>
-    <published>2017-10-05T07:52:54.000Z</published>
-    <updated>2017-10-10T19:02:21.393Z</updated>
-    
-    <content type="html"><![CDATA[<p><br>精通一套非主流框架给我带来哪些收获<br>原创<br><br>截至目前，本人已从事企业级软件开发十几年，由于08年时我的第一家公司从一家最主流的外企引入了一套非主流但效率奇高的开发框架，我便一发不可收拾，先后十年间分别为民企、外包、百度、华为等公司实施过该技术，过程中坎坷不断，今天总结一下这段辛路历程。<br>（我不是来打广告的，本文不会出现该技术的名称）<br><br>08年的时候，我还是一名web工程师，前端用的是开源的ExtJs。后端用的是基于Ejb+Spring+Jersey的REST架构。开发一个具有十几个page的企业级系统，一般需要4个人，一个架构师负责环境和DB设计，一个后台开发，2个前端开发。因为那个时候Ext还是一种新颖的js框架，需要边写补丁改源码边使用。<br><br>我用了一年，将前端的开发速度从5day/page，提升到0.5day/page。公司问我还能不能更快，我就写了个自动化框架，这回提升到1hour/page。然后，就没有然后了….公司觉得技术门槛太高，推广起来比较困难。后台熟悉Spring那套技术的人也贵，这就是成本问题了。（关于企业级软件系统到底有多复杂，请查看我的另一篇文章：《企业级系统到底有多复杂》）<br><br>当时大部分公司，还停留在SSH阶段，连REST和前后端分离都很少在用，SSH是我上学时学的东西，简直落后太多了。于是我就继续搞自己的前端自动化框架，顺便看看公司还有什么更先进的东西。<br><br>过了几个月，他们还真搞到一套东西，就是我说的那套从行业最主流的公司引入的非主流框架。它可以让一个人花几分钟，通过拖拖拽拽的方式搞出一个还算复杂的page。这东西比起我自己想搞的自动化框架可就成熟太多了，原来我想做的东西，人家已经搞出来了，而且想的比我全面太多太多。毕竟是国外大公司的框架，我也算抱着开眼看世界的心态接受了。<br><br>又过了三个月，你猜怎么着，这东西看上去挺简单，但做定制开发的时候难度可就大了…<br>毕竟我们都是新手，没有中文资料，国内第一家引进，前端3千多页文档，后端3千多页文档，如果考虑到demo，集成，测试等文档，就太多太多太多了….  我居然还看下来几千页，还翻译了不少组件的用法。看过之后我真的非常佩服老外的技术实力，感觉就像我们国内的开源界还在努力学着用中世纪火枪，而人家美国已经研究出了机关枪了。<br><br>但问题又来了，作为一家传统企业，很少有像我这么爱研究技术的，而软件是一个个环节衔接起来的。就像我们买了一套批量生产汽车的数控机床流水线，而需求人员却只知道手工做出来的自行车长什么样……他们要我们原封不动的照搬老系统的功能和样式，这就很悲剧了….（与他们不同的是，后来的百度要我们用这套东西生产豪华跑车，虽然还是很悲剧，但我们还算勉强做到了）。<br><br>结果可想而知，业务为主的公司当然不会听技术人员的话，加班加点也只能搞出个四不像。<br><br>在那之后我意识到，无论再好的框架，都不是一两个技术人员就能左右整个项目的成败的，于是我开始关注软件生产的各个环节。从一点点给需求人员提改进建议（仅限少数需求人员），到早期立项时就确定哪些能做，哪些应该结合其他技术做，哪些坑要避免（更少，但很成功）。<br><br>可以说，到目前为止，我前5年的技术生涯都是一边研究（没有先例），一边查资料（没有翻译），一边被鄙视（开发而已嘛，没什么技术含量啦…）。<br><br>但是5年后，我学会了很多东西，比如：<br>  ● 长期接触让我了解到企业应怎样搭建软件架构，才能实现省钱、高效完成业务需求。<br>  ● 必须长期深入技术，因为我们不能指望随便叫一个人来帮我们解决问题，这是小众技术。<br>  ● 要能识别设计的合理性。因为这套框架包含了设计的思想，不合理的设计真的很难做出来，反正折腾半天最后还是要改成合理的。<br>  ● 我还学会了做培训，至少短期就能让人上手开发。<br>  ● 很多上下游相关的都要知道些。<br><br>还好，几年后，由于市场需求巨大，而会的人少，此技术的程序员薪资高于普通Java程序员很多，很多公司还专门成立部门全是搞这个技术的。<br><br>到2016年的时候，该技术达到顶峰，然后又趋向小众了。<br>什么原因呢？<br>  1. 由于大量技术不达标的程序员涌入，导致该技术的口碑被破坏了<br>  2. 与国内开源主流技术思维差异太大，很多之前搞开源的Java程序员看到这个东西赚钱，就直接开始搞这套东西，而用的还是以前那套思维方式。而公司和用户是不会区分的，因此认为该技术有问题。<br>  3. 厂商宣传力度不够，前些年在世界级大会上还有宣传，而这一两年风头完全被云计算、大数据、AI给盖过去了。而商业框架就是这样，你不宣传别人是不会主动关心的。<br>  4. 还是这些年开源太火了，连效率不是那么高的传统开发方式都能被现在的企业所接受。<br>  5. 一个初级程序员利用该技术可以提高薪水，而高级程序员不会把技术局限于一个开发框架上，也是导致该技术无法发挥的重要原因。<br><br>好在，该技术已经推出了免费版本，而且在国外依然属于主流技术，有大量的高水平爱好者。<br>反观历史上各种IT技术的发展轨迹，都是先小众à大众à泡沫à泡沫破灭à再次发展，我认为该技术还是有发展空间的。<br></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;br&gt;精通一套非主流框架给我带来哪些收获&lt;br&gt;原创&lt;br&gt;&lt;br&gt;截至目前，本人已从事企业级软件开发十几年，由于08年时我的第一家公司从一家最主流的外企引入了一套非主流但效率奇高的开发框架，我便一发不可收拾，先后十年间分别为民企、外包、百度、华为等公司实施过该技术，过程
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.zhucai.me/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="企业级系统" scheme="http://blog.zhucai.me/tags/%E4%BC%81%E4%B8%9A%E7%BA%A7%E7%B3%BB%E7%BB%9F/"/>
-    
-      <category term="随笔" scheme="http://blog.zhucai.me/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>企业级系统到底有多复杂</title>
-    <link href="http://blog.zhucai.me/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/"/>
-    <id>http://blog.zhucai.me/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/</id>
-    <published>2017-10-05T07:46:26.000Z</published>
-    <updated>2017-10-10T19:02:32.571Z</updated>
-    
-    <content type="html"><![CDATA[<p><br><br>本人从事企业级系统开发十几年，曾先后为没落民企、国企、最大外包、百度、华为工作过。<br><br>经常有人问我，企业级系统相比我们平时用的系统有什么区别？<br><br>这个区别可大了，一般的解释是企业级要求更高的事务性和安全性。我觉得举个我做过的例子，比如百度的资金管理系统，他们有大量的闲置资金，这些钱放着不动就是很大的浪费。所以这些钱要不停的买各种各样的基金，理财产品，到期后要以最快的速度购买下一个基金，理财产品。或者按照不通地区子公司的需求，准确及时的打到对应的账户中去。这就涉及到汇率，跨银行转账，哪家手续费最优惠的问题。什么支付宝？那个时候还没有支付宝，再说企业间一转几个亿，不可能通过支付宝的。<br><br>是不是听上去也没什么？那是因为我还没提流程！设想美国一个财务发起资金使用的申请，她要填写各种信息，这些信息会转给她的上级审批，如果金额小于一定数额（例如50万），她上级同意就可以了，如果大于50万，上级的上级也要审批，依此类推….<br><br>如果中间一个环节的领导不上班了（休假、跳槽…）这个流程不能卡住不动，人家财务美眉还等着用钱呢，耽误了前线的同志开拓市场这个锅谁也背不起（国企除外，他们效率低也没事）。<br><br>上面的流程通过后（不通过就打回重填），假设美国的现金不够了，那么系统要开始赎回指定的理财产品并且转账到美国。理财产品有的可能是T+10，有的则是T+3（收益不同），系统要自动识别出赎回哪些产品可以及时满足美国财务美眉的资金需求，还能最大化理财收益，涉及到很多方案对比和运算，赎回产品的过程又是一顿审批流程，当时还不能完全让机器做决定。<br><br>现在能不能我也不清楚…反正人做决定的次数多了，机器才可能学着做（机器学习是依赖于较多的数据量的）。<br><br>还不复杂？那我说这个系统还要跟其他系统对接，比如对接HR系统获取上下级关系，对接老的核心财务系统（可能是记录了近十年的公司财务数据），甚至进一步对接物料、外网系统，实现一些自动化功能。<br><br>你没看错，说了半天这个理财系统只是一个外围系统，连核心财务系统都不算。<br><br>如果你觉得还不复杂，那你想想全国的交通运输系统大概是个什么样子。全国的社保到现在还没联网仅仅是不想的问题么…<br><br>以上所说的复杂度仅仅只是一方面，考虑过成本吗？<br><br>人才成本方面：有几个企业会像互联网公司一样一年上百万的养高端人才，大部分都是刚毕业的学生，重要的项目给你配个有两三年经验的你就知足吧。而且北上广人才流动性通常都比较高，又是一个情况。<br>公司可不会因为这些原因让你多干几个月，像华为的做法是需求还没确定前，上线日期（dead line）就已经定下来了。常见的情况是离上线还有2个月，需求还没确定下来，甚至技术还在换来换去。你说做不完？有风险？再给你几个应届生，然后自己加班去…. 执行力就是这样体现的。<br><br></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;br&gt;&lt;br&gt;本人从事企业级系统开发十几年，曾先后为没落民企、国企、最大外包、百度、华为工作过。&lt;br&gt;&lt;br&gt;经常有人问我，企业级系统相比我们平时用的系统有什么区别？&lt;br&gt;&lt;br&gt;这个区别可大了，一般的解释是企业级要求更高的事务性和安全性。我觉得举个我做过的例子，比如
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.zhucai.me/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="企业级系统" scheme="http://blog.zhucai.me/tags/%E4%BC%81%E4%B8%9A%E7%BA%A7%E7%B3%BB%E7%BB%9F/"/>
-    
-      <category term="随笔" scheme="http://blog.zhucai.me/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scala学习笔记（五）集合操作</title>
-    <link href="http://blog.zhucai.me/2017/10/05/scalaStudy5/"/>
-    <id>http://blog.zhucai.me/2017/10/05/scalaStudy5/</id>
-    <published>2017-10-05T07:33:40.000Z</published>
-    <updated>2017-10-05T07:42:53.597Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">object HelloArrayOps &#123;</div><div class="line"></div><div class="line">  def main(args: Array[String]): Unit = &#123;</div><div class="line">    //    val array = new Array[Int](5)</div><div class="line">    //    val array = Array[Int](1,2,3,4,5)</div><div class="line">    //    val array = Array(1, 2, 3, 4, 5)</div><div class="line">    //   val array = Array.apply(1,2,3,4,5)</div><div class="line">    val array = Array(1, 2, 3, 4, 5)</div><div class="line">    array(0) = 10</div><div class="line">    for (item &lt;- array) println(item)</div><div class="line"></div><div class="line">    import scala.collection.mutable.ArrayBuffer</div><div class="line">    val arrayBuffer = new ArrayBuffer[Int]()</div><div class="line">    arrayBuffer += 1</div><div class="line">    arrayBuffer += 2</div><div class="line">    arrayBuffer += 3</div><div class="line">    arrayBuffer += (4, 5, 6, 7, 8, 9, 10)</div><div class="line">    arrayBuffer ++= Array(1, 2, 3)</div><div class="line">    arrayBuffer.insert(arrayBuffer.length - 1, 100, 1000)</div><div class="line">    for (item &lt;- arrayBuffer) println(item)</div><div class="line"></div><div class="line">    for (i &lt;- 0 until (array.length)) print(array(i) + &quot; &quot;)</div><div class="line">    println</div><div class="line">    for (i &lt;- 0 until (array.length, 2)) print(array(i) + &quot; &quot;)</div><div class="line">    println</div><div class="line">    for (i &lt;- (0 until array.length).reverse) print(array(i) + &quot; &quot;)</div><div class="line">    println</div><div class="line">    scala.util.Sorting.quickSort(array)</div><div class="line">    println(array.mkString(&quot;(&quot;, &quot;,&quot;, &quot;)&quot;))</div><div class="line">    println(array.sum)</div><div class="line">    println(array.max)</div><div class="line"></div><div class="line">    //如果想在已有数组基础的基础上，通过操作每个元素来生成新的元素，可使用yield语法来完成。</div><div class="line">    val arrayAddedOne = for (item &lt;- array) yield item + 1</div><div class="line">    println(arrayAddedOne.mkString(&quot;,&quot;))</div><div class="line"></div><div class="line">    val arrayEven = for (item &lt;- array if item % 2 == 0) yield item</div><div class="line">    println(arrayEven.mkString(&quot;,&quot;))</div><div class="line"></div><div class="line">    println(array.filter &#123; x =&gt; x % 2 == 0 &#125;.mkString(&quot; &quot;))</div><div class="line"></div><div class="line">    println(array.filter &#123; x =&gt; x % 2 == 0 &#125;.map&#123; x=&gt; x*10&#125;.mkString(&quot; &quot;))</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">继承结构</div><div class="line">1.Iterable是Trait，要求继承者实现一些共同的方法，例如遍历</div><div class="line">2.Array是一个基础数据结构，不从属scala集合体系</div><div class="line">3，集合体系中的集合分为可变集合：scala.collection.mutable._</div><div class="line">与不可变集合：scala.collection.immutable._</div><div class="line">4.List是元素的列表集合，是不可变的：</div><div class="line">1 to 10 -&gt; Range -&gt; </div><div class="line">5.List是元素的列表集合，是不可变的：</div><div class="line">  第一点：List中的head是第一个元素，tail是剩下的元素构成的新List</div><div class="line">  第二点：使用：：这个操作符来把List和其他的元素进行组拼来构建新的List</div><div class="line">print(0::list)</div><div class="line">  第三点：如果集合中没有元素的话，此时为Nil，例如List中只有一个元素，那么tail操作就会返回Nil</div><div class="line">6，LinkedList是可修改的，元素可变列表</div><div class="line">7，Set是元素不可重复的集合，且元素是无序的；HashSet中的元素不可变，且不可重复，且不能保证顺序</div><div class="line">8，LinkedHashSet会维护元素的插入顺序</div><div class="line">9，SortedSet会自动为插入的元素进行排序（1,2,3,4,5...）</div><div class="line">scala.collection.mutable.LinkedHashSet</div><div class="line">scala.collection.mutable.HashSet</div><div class="line">scala.collection.mutable.SortedSet</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="开发" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="后端" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="Scala" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/%E5%90%8E%E7%AB%AF/Scala/"/>
-    
-    
-      <category term="技术" scheme="http://blog.zhucai.me/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="Scala" scheme="http://blog.zhucai.me/tags/Scala/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scala学习笔记（六）Map和Tuple</title>
-    <link href="http://blog.zhucai.me/2017/10/05/scalaStudy6/"/>
-    <id>http://blog.zhucai.me/2017/10/05/scalaStudy6/</id>
-    <published>2017-10-05T07:33:40.000Z</published>
-    <updated>2017-10-05T07:42:47.579Z</updated>
-    
-    <content type="html"><![CDATA[<p>Java中没有Tuple，Python中有Tuple且与scala中的功能相似<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">package com.study</div><div class="line"></div><div class="line">/**</div><div class="line"> * 常用数据结构Map和Tuple</div><div class="line"> * 1,默认情况下Map构造的是不可变的集合，里面的内容不可修改，一旦修改就变成新Map，原有的Map内容保持不变</div><div class="line"> * 2，Map的实例是调用工厂方法模式apply来构造Map实例，而需要主要的是Map是接口，在apply中使用了具体的实现：</div><div class="line"> * 3，如果想要直接new出Map实例，则需要使用HashMap等具体的子类；</div><div class="line"> * 4,查询一个Map中的值一定是采用getOrElse的语法，避免key不存在时产生异常。并且提供默认值。Spark中大量采用getOrElse</div><div class="line"> * 5,SortedMap 对Key进行排序的Map</div><div class="line"> * 6，LinkedHashMap可以记住插入元素的顺序</div><div class="line"> * 7,Tuple中可以有很多不同类型的数据</div><div class="line"> * 8,在企业级开发大数据时，一定反复使用Tuple来表达数据结构，以及使用tuple来处理业务逻辑</div><div class="line"> * 9，Tuple的另外一个非常重要的使用是作为函数的返回值，在Tuple中返回若干个值，以SparkContext源码为例来说明</div><div class="line"> * Create and start the scheduler</div><div class="line"> * val(sched,ts)=SparkContext.createTaskScheduler(this,master)</div><div class="line"> * _schedulerBackend = sched</div><div class="line"> * _taskScheduler = ts</div><div class="line"> *</div><div class="line"> */</div><div class="line">object HelloMapTuple &#123;</div><div class="line">  def main(args: Array[String]): Unit = &#123;</div><div class="line">    val bigDatas = Map(&quot;Spark&quot; -&gt; 6, &quot;Hadoop&quot; -&gt; 11) //调用工厂方法模式apply来构造Map实例，而需要主要的是Map是接口，在apply中使用了具体的实现</div><div class="line">    //bigDatas不可修改</div><div class="line"></div><div class="line">    val programingLanguage = scala.collection.mutable.Map(&quot;Scala&quot; -&gt; 13, &quot;Java&quot; -&gt; 23)</div><div class="line">    programingLanguage(&quot;Scala&quot;) = 15</div><div class="line"></div><div class="line">    var persons = Map((&quot;A&quot;, 10), (&quot;B&quot;, 20))</div><div class="line">    println(persons.getOrElse(&quot;Python&quot;, &quot;default1&quot;)) //避免异常，提供默认值</div><div class="line">    println(persons.getOrElse(&quot;A&quot;, &quot;default2&quot;))</div><div class="line"></div><div class="line">    var personInformation = new scala.collection.mutable.HashMap[String, Int]</div><div class="line">    personInformation += (&quot;Scala&quot; -&gt; 13, &quot;Java&quot; -&gt; 23) //增加元素</div><div class="line">    //    personInformation -= (&quot;Java&quot;) //减少元素</div><div class="line">    for ((name, age) &lt;- personInformation) println(name + &quot;:&quot; + age)</div><div class="line">    for (key &lt;- personInformation.keySet) println(key)</div><div class="line">    for (value &lt;- personInformation.values) println(value)</div><div class="line">    println(&quot;---------生成新Map[int,string]-------------&quot;)</div><div class="line">    val result = for ((name, age) &lt;- personInformation) yield (age, name)</div><div class="line">    println(result.keySet.mkString(&quot; &quot;))</div><div class="line">    println(result.values.mkString(&quot; &quot;))</div><div class="line">    println(&quot;---------SortedMap-------------&quot;)</div><div class="line">    val sortedMap = scala.collection.mutable.SortedMap((&quot;A&quot;, 10), (&quot;C&quot;, 20), (&quot;B&quot;, 30))</div><div class="line">    println(sortedMap.keySet.mkString(&quot; &quot;))</div><div class="line">    println(sortedMap.values.mkString(&quot; &quot;))</div><div class="line">    //A B C</div><div class="line">    //10 30 20</div><div class="line">    println(&quot;---------LinkedHashMap-------------&quot;)</div><div class="line">    val linkedHashMap = scala.collection.mutable.LinkedHashMap((&quot;3&quot;, 10), (&quot;1&quot;, 20), (&quot;4&quot;, 30), (&quot;5&quot;, 30), (&quot;9&quot;, 30))</div><div class="line">    linkedHashMap +=((&quot;12&quot;,12),(&quot;001&quot;,1))</div><div class="line">    linkedHashMap +=(&quot;Scala&quot;-&gt;13,&quot;python&quot;-&gt;10)</div><div class="line">    println(linkedHashMap.keySet.mkString(&quot; &quot;))</div><div class="line">    println(linkedHashMap.values.mkString(&quot; &quot;))</div><div class="line">     println(&quot;---------Tuple中可以有很多不同类型的数据-------------&quot;)</div><div class="line">     val information=(&quot;Test&quot;,&quot;male&quot;,30,&quot;String&quot;)</div><div class="line">     //由于类型不同无法使用for(item&lt;-xx)方式读取</div><div class="line">     println(information._3)</div><div class="line">     </div><div class="line">     </div><div class="line">     </div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>一种Map Reduce的计算示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">   val txt1=&quot;I am into Spark so much&quot;</div><div class="line">      val txt2=&quot;Scala is powerful&quot;</div><div class="line">      println(List(txt1,txt2).flatMap&#123;x=&gt;x.split(&quot; &quot;)&#125;.map &#123;x=&gt;(x,1)&#125;.map(x=&gt;x._2).reduce(_+_) )</div><div class="line">      println(List(txt1,txt2).flatMap&#123;x=&gt;x.split(&quot; &quot;)&#125;.map &#123;(_,1)&#125;.map&#123;(_._2)&#125;.reduce(_+_)) // 简化语法，同上</div><div class="line">      println(List(txt1,txt2).flatMap&#123;x=&gt;x.split(&quot; &quot;)&#125;.map &#123;(_,1)&#125;.map&#123;(_._2)&#125;.reduce((x,y)=&gt;x+y)) // 简化语法，同上</div><div class="line">      /**</div><div class="line">       * 计算过程</div><div class="line">       * List(&quot;I am into Spark so much&quot;,&quot;Scala is powerful&quot;)  -&gt; .flatMap&#123;x=&gt;x.split(&quot; &quot;)</div><div class="line">       * List(I, am, into, Spark, so, much, Scala, is, powerful)  -&gt; .map &#123;x=&gt;(x,1)&#125;</div><div class="line">       * List((I,1), (am,1), (into,1), (Spark,1), (so,1), (much,1), (Scala,1), (is,1), (powerful,1))  -&gt; .map(x=&gt;x._2)</div><div class="line">       * List(1, 1, 1, 1, 1, 1, 1, 1, 1)  -&gt; .reduce(_+_)</div><div class="line">       * 9</div><div class="line">       */</div><div class="line"></div><div class="line">占位符_用法演示     </div><div class="line">      List(0,1,2,3,4,5).foreach&#123;x=&gt;print(x)&#125;</div><div class="line">      println</div><div class="line">      List(0,1,2,3,4,5).foreach&#123;print(_)&#125; // 简化语法，同上</div><div class="line">      println</div><div class="line">      List(0,1,2,3,4,5).foreach&#123;print _ &#125; // 简化语法，同上</div><div class="line">      println</div><div class="line">      List(0,1,2,3,4,5).foreach&#123;print&#125; // 简化语法，同上</div><div class="line">      println</div><div class="line">      List(0,1,2,3,4,5).foreach(print) // 简化语法，同上</div><div class="line">      println</div></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Java中没有Tuple，Python中有Tuple且与scala中的功能相似&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;d
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="开发" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="后端" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="Scala" scheme="http://blog.zhucai.me/categories/%E6%8A%80%E6%9C%AF/%E5%BC%80%E5%8F%91/%E5%90%8E%E7%AB%AF/Scala/"/>
-    
-    
-      <category term="技术" scheme="http://blog.zhucai.me/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="原创" scheme="http://blog.zhucai.me/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="Scala" scheme="http://blog.zhucai.me/tags/Scala/"/>
     
   </entry>
   

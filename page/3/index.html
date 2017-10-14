@@ -58,9 +58,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.zhucai.me"></form>
@@ -70,6 +70,176 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-BenefitsOfProficientInNonMainstreamFramework" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/" class="article-date">
+  <time datetime="2017-10-05T07:52:54.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/">精通一套非主流框架给我带来哪些收获</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br>精通一套非主流框架给我带来哪些收获<br>原创<br><br>截至目前，本人已从事企业级软件开发十几年，由于08年时我的第一家公司从一家最主流的外企引入了一套非主流但效率奇高的开发框架，我便一发不可收拾，先后十年间分别为民企、外包、百度、华为等公司实施过该技术，过程中坎坷不断，今天总结一下这段辛路历程。<br>（我不是来打广告的，本文不会出现该技术的名称）<br><br>08年的时候，我还是一名web工程师，前端用的是开源的ExtJs。后端用的是基于Ejb+Spring+Jersey的REST架构。开发一个具有十几个page的企业级系统，一般需要4个人，一个架构师负责环境和DB设计，一个后台开发，2个前端开发。因为那个时候Ext还是一种新颖的js框架，需要边写补丁改源码边使用。<br><br>我用了一年，将前端的开发速度从5day/page，提升到0.5day/page。公司问我还能不能更快，我就写了个自动化框架，这回提升到1hour/page。然后，就没有然后了….公司觉得技术门槛太高，推广起来比较困难。后台熟悉Spring那套技术的人也贵，这就是成本问题了。（关于企业级软件系统到底有多复杂，请查看我的另一篇文章：《企业级系统到底有多复杂》）<br><br>当时大部分公司，还停留在SSH阶段，连REST和前后端分离都很少在用，SSH是我上学时学的东西，简直落后太多了。于是我就继续搞自己的前端自动化框架，顺便看看公司还有什么更先进的东西。<br><br>过了几个月，他们还真搞到一套东西，就是我说的那套从行业最主流的公司引入的非主流框架。它可以让一个人花几分钟，通过拖拖拽拽的方式搞出一个还算复杂的page。这东西比起我自己想搞的自动化框架可就成熟太多了，原来我想做的东西，人家已经搞出来了，而且想的比我全面太多太多。毕竟是国外大公司的框架，我也算抱着开眼看世界的心态接受了。<br><br>又过了三个月，你猜怎么着，这东西看上去挺简单，但做定制开发的时候难度可就大了…<br>毕竟我们都是新手，没有中文资料，国内第一家引进，前端3千多页文档，后端3千多页文档，如果考虑到demo，集成，测试等文档，就太多太多太多了….  我居然还看下来几千页，还翻译了不少组件的用法。看过之后我真的非常佩服老外的技术实力，感觉就像我们国内的开源界还在努力学着用中世纪火枪，而人家美国已经研究出了机关枪了。<br><br>但问题又来了，作为一家传统企业，很少有像我这么爱研究技术的，而软件是一个个环节衔接起来的。就像我们买了一套批量生产汽车的数控机床流水线，而需求人员却只知道手工做出来的自行车长什么样……他们要我们原封不动的照搬老系统的功能和样式，这就很悲剧了….（与他们不同的是，后来的百度要我们用这套东西生产豪华跑车，虽然还是很悲剧，但我们还算勉强做到了）。<br><br>结果可想而知，业务为主的公司当然不会听技术人员的话，加班加点也只能搞出个四不像。<br><br>在那之后我意识到，无论再好的框架，都不是一两个技术人员就能左右整个项目的成败的，于是我开始关注软件生产的各个环节。从一点点给需求人员提改进建议（仅限少数需求人员），到早期立项时就确定哪些能做，哪些应该结合其他技术做，哪些坑要避免（更少，但很成功）。<br><br>可以说，到目前为止，我前5年的技术生涯都是一边研究（没有先例），一边查资料（没有翻译），一边被鄙视（开发而已嘛，没什么技术含量啦…）。<br><br>但是5年后，我学会了很多东西，比如：<br>  ● 长期接触让我了解到企业应怎样搭建软件架构，才能实现省钱、高效完成业务需求。<br>  ● 必须长期深入技术，因为我们不能指望随便叫一个人来帮我们解决问题，这是小众技术。<br>  ● 要能识别设计的合理性。因为这套框架包含了设计的思想，不合理的设计真的很难做出来，反正折腾半天最后还是要改成合理的。<br>  ● 我还学会了做培训，至少短期就能让人上手开发。<br>  ● 很多上下游相关的都要知道些。<br><br>还好，几年后，由于市场需求巨大，而会的人少，此技术的程序员薪资高于普通Java程序员很多，很多公司还专门成立部门全是搞这个技术的。<br><br>到2016年的时候，该技术达到顶峰，然后又趋向小众了。<br>什么原因呢？<br>  1. 由于大量技术不达标的程序员涌入，导致该技术的口碑被破坏了<br>  2. 与国内开源主流技术思维差异太大，很多之前搞开源的Java程序员看到这个东西赚钱，就直接开始搞这套东西，而用的还是以前那套思维方式。而公司和用户是不会区分的，因此认为该技术有问题。<br>  3. 厂商宣传力度不够，前些年在世界级大会上还有宣传，而这一两年风头完全被云计算、大数据、AI给盖过去了。而商业框架就是这样，你不宣传别人是不会主动关心的。<br>  4. 还是这些年开源太火了，连效率不是那么高的传统开发方式都能被现在的企业所接受。<br>  5. 一个初级程序员利用该技术可以提高薪水，而高级程序员不会把技术局限于一个开发框架上，也是导致该技术无法发挥的重要原因。<br><br>好在，该技术已经推出了免费版本，而且在国外依然属于主流技术，有大量的高水平爱好者。<br>反观历史上各种IT技术的发展轨迹，都是先小众à大众à泡沫à泡沫破灭à再次发展，我认为该技术还是有发展空间的。<br></p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/05/BenefitsOfProficientInNonMainstreamFramework/" data-id="cj8pxeopi00075kqruzvptsmc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/企业级系统/">企业级系统</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HowComplexIsAnEnterpriseLevelSystem" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/" class="article-date">
+  <time datetime="2017-10-05T07:46:26.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/">企业级系统到底有多复杂</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br><br>本人从事企业级系统开发十几年，曾先后为没落民企、国企、最大外包、百度、华为工作过。<br><br>经常有人问我，企业级系统相比我们平时用的系统有什么区别？<br><br>这个区别可大了，一般的解释是企业级要求更高的事务性和安全性。我觉得举个我做过的例子，比如百度的资金管理系统，他们有大量的闲置资金，这些钱放着不动就是很大的浪费。所以这些钱要不停的买各种各样的基金，理财产品，到期后要以最快的速度购买下一个基金，理财产品。或者按照不通地区子公司的需求，准确及时的打到对应的账户中去。这就涉及到汇率，跨银行转账，哪家手续费最优惠的问题。什么支付宝？那个时候还没有支付宝，再说企业间一转几个亿，不可能通过支付宝的。<br><br>是不是听上去也没什么？那是因为我还没提流程！设想美国一个财务发起资金使用的申请，她要填写各种信息，这些信息会转给她的上级审批，如果金额小于一定数额（例如50万），她上级同意就可以了，如果大于50万，上级的上级也要审批，依此类推….<br><br>如果中间一个环节的领导不上班了（休假、跳槽…）这个流程不能卡住不动，人家财务美眉还等着用钱呢，耽误了前线的同志开拓市场这个锅谁也背不起（国企除外，他们效率低也没事）。<br><br>上面的流程通过后（不通过就打回重填），假设美国的现金不够了，那么系统要开始赎回指定的理财产品并且转账到美国。理财产品有的可能是T+10，有的则是T+3（收益不同），系统要自动识别出赎回哪些产品可以及时满足美国财务美眉的资金需求，还能最大化理财收益，涉及到很多方案对比和运算，赎回产品的过程又是一顿审批流程，当时还不能完全让机器做决定。<br><br>现在能不能我也不清楚…反正人做决定的次数多了，机器才可能学着做（机器学习是依赖于较多的数据量的）。<br><br>还不复杂？那我说这个系统还要跟其他系统对接，比如对接HR系统获取上下级关系，对接老的核心财务系统（可能是记录了近十年的公司财务数据），甚至进一步对接物料、外网系统，实现一些自动化功能。<br><br>你没看错，说了半天这个理财系统只是一个外围系统，连核心财务系统都不算。<br><br>如果你觉得还不复杂，那你想想全国的交通运输系统大概是个什么样子。全国的社保到现在还没联网仅仅是不想的问题么…<br><br>以上所说的复杂度仅仅只是一方面，考虑过成本吗？<br><br>人才成本方面：有几个企业会像互联网公司一样一年上百万的养高端人才，大部分都是刚毕业的学生，重要的项目给你配个有两三年经验的你就知足吧。而且北上广人才流动性通常都比较高，又是一个情况。<br>公司可不会因为这些原因让你多干几个月，像华为的做法是需求还没确定前，上线日期（dead line）就已经定下来了。常见的情况是离上线还有2个月，需求还没确定下来，甚至技术还在换来换去。你说做不完？有风险？再给你几个应届生，然后自己加班去…. 执行力就是这样体现的。<br><br></p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/05/HowComplexIsAnEnterpriseLevelSystem/" data-id="cj8pxeoqa000f5kqrlrtbiomr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/企业级系统/">企业级系统</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-scalaStudy5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/scalaStudy5/" class="article-date">
+  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Scala/">Scala</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/scalaStudy5/">scala学习笔记（五）集合操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">object HelloArrayOps &#123;</div><div class="line"></div><div class="line">  def main(args: Array[String]): Unit = &#123;</div><div class="line">    //    val array = new Array[Int](5)</div><div class="line">    //    val array = Array[Int](1,2,3,4,5)</div><div class="line">    //    val array = Array(1, 2, 3, 4, 5)</div><div class="line">    //   val array = Array.apply(1,2,3,4,5)</div><div class="line">    val array = Array(1, 2, 3, 4, 5)</div><div class="line">    array(0) = 10</div><div class="line">    for (item &lt;- array) println(item)</div><div class="line"></div><div class="line">    import scala.collection.mutable.ArrayBuffer</div><div class="line">    val arrayBuffer = new ArrayBuffer[Int]()</div><div class="line">    arrayBuffer += 1</div><div class="line">    arrayBuffer += 2</div><div class="line">    arrayBuffer += 3</div><div class="line">    arrayBuffer += (4, 5, 6, 7, 8, 9, 10)</div><div class="line">    arrayBuffer ++= Array(1, 2, 3)</div><div class="line">    arrayBuffer.insert(arrayBuffer.length - 1, 100, 1000)</div><div class="line">    for (item &lt;- arrayBuffer) println(item)</div><div class="line"></div><div class="line">    for (i &lt;- 0 until (array.length)) print(array(i) + &quot; &quot;)</div><div class="line">    println</div><div class="line">    for (i &lt;- 0 until (array.length, 2)) print(array(i) + &quot; &quot;)</div><div class="line">    println</div><div class="line">    for (i &lt;- (0 until array.length).reverse) print(array(i) + &quot; &quot;)</div><div class="line">    println</div><div class="line">    scala.util.Sorting.quickSort(array)</div><div class="line">    println(array.mkString(&quot;(&quot;, &quot;,&quot;, &quot;)&quot;))</div><div class="line">    println(array.sum)</div><div class="line">    println(array.max)</div><div class="line"></div><div class="line">    //如果想在已有数组基础的基础上，通过操作每个元素来生成新的元素，可使用yield语法来完成。</div><div class="line">    val arrayAddedOne = for (item &lt;- array) yield item + 1</div><div class="line">    println(arrayAddedOne.mkString(&quot;,&quot;))</div><div class="line"></div><div class="line">    val arrayEven = for (item &lt;- array if item % 2 == 0) yield item</div><div class="line">    println(arrayEven.mkString(&quot;,&quot;))</div><div class="line"></div><div class="line">    println(array.filter &#123; x =&gt; x % 2 == 0 &#125;.mkString(&quot; &quot;))</div><div class="line"></div><div class="line">    println(array.filter &#123; x =&gt; x % 2 == 0 &#125;.map&#123; x=&gt; x*10&#125;.mkString(&quot; &quot;))</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">继承结构</div><div class="line">1.Iterable是Trait，要求继承者实现一些共同的方法，例如遍历</div><div class="line">2.Array是一个基础数据结构，不从属scala集合体系</div><div class="line">3，集合体系中的集合分为可变集合：scala.collection.mutable._</div><div class="line">与不可变集合：scala.collection.immutable._</div><div class="line">4.List是元素的列表集合，是不可变的：</div><div class="line">1 to 10 -&gt; Range -&gt; </div><div class="line">5.List是元素的列表集合，是不可变的：</div><div class="line">  第一点：List中的head是第一个元素，tail是剩下的元素构成的新List</div><div class="line">  第二点：使用：：这个操作符来把List和其他的元素进行组拼来构建新的List</div><div class="line">print(0::list)</div><div class="line">  第三点：如果集合中没有元素的话，此时为Nil，例如List中只有一个元素，那么tail操作就会返回Nil</div><div class="line">6，LinkedList是可修改的，元素可变列表</div><div class="line">7，Set是元素不可重复的集合，且元素是无序的；HashSet中的元素不可变，且不可重复，且不能保证顺序</div><div class="line">8，LinkedHashSet会维护元素的插入顺序</div><div class="line">9，SortedSet会自动为插入的元素进行排序（1,2,3,4,5...）</div><div class="line">scala.collection.mutable.LinkedHashSet</div><div class="line">scala.collection.mutable.HashSet</div><div class="line">scala.collection.mutable.SortedSet</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy5/" data-id="cj8pxeosf00205kqr3bx6c2l7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-scalaStudy6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/scalaStudy6/" class="article-date">
+  <time datetime="2017-10-05T07:33:40.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Scala/">Scala</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/scalaStudy6/">scala学习笔记（六）Map和Tuple</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java中没有Tuple，Python中有Tuple且与scala中的功能相似<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">package com.study</div><div class="line"></div><div class="line">/**</div><div class="line"> * 常用数据结构Map和Tuple</div><div class="line"> * 1,默认情况下Map构造的是不可变的集合，里面的内容不可修改，一旦修改就变成新Map，原有的Map内容保持不变</div><div class="line"> * 2，Map的实例是调用工厂方法模式apply来构造Map实例，而需要主要的是Map是接口，在apply中使用了具体的实现：</div><div class="line"> * 3，如果想要直接new出Map实例，则需要使用HashMap等具体的子类；</div><div class="line"> * 4,查询一个Map中的值一定是采用getOrElse的语法，避免key不存在时产生异常。并且提供默认值。Spark中大量采用getOrElse</div><div class="line"> * 5,SortedMap 对Key进行排序的Map</div><div class="line"> * 6，LinkedHashMap可以记住插入元素的顺序</div><div class="line"> * 7,Tuple中可以有很多不同类型的数据</div><div class="line"> * 8,在企业级开发大数据时，一定反复使用Tuple来表达数据结构，以及使用tuple来处理业务逻辑</div><div class="line"> * 9，Tuple的另外一个非常重要的使用是作为函数的返回值，在Tuple中返回若干个值，以SparkContext源码为例来说明</div><div class="line"> * 		Create and start the scheduler</div><div class="line"> * 		val(sched,ts)=SparkContext.createTaskScheduler(this,master)</div><div class="line"> * 		_schedulerBackend = sched</div><div class="line"> * 		_taskScheduler = ts</div><div class="line"> *</div><div class="line"> */</div><div class="line">object HelloMapTuple &#123;</div><div class="line">  def main(args: Array[String]): Unit = &#123;</div><div class="line">    val bigDatas = Map(&quot;Spark&quot; -&gt; 6, &quot;Hadoop&quot; -&gt; 11) //调用工厂方法模式apply来构造Map实例，而需要主要的是Map是接口，在apply中使用了具体的实现</div><div class="line">    //bigDatas不可修改</div><div class="line"></div><div class="line">    val programingLanguage = scala.collection.mutable.Map(&quot;Scala&quot; -&gt; 13, &quot;Java&quot; -&gt; 23)</div><div class="line">    programingLanguage(&quot;Scala&quot;) = 15</div><div class="line"></div><div class="line">    var persons = Map((&quot;A&quot;, 10), (&quot;B&quot;, 20))</div><div class="line">    println(persons.getOrElse(&quot;Python&quot;, &quot;default1&quot;)) //避免异常，提供默认值</div><div class="line">    println(persons.getOrElse(&quot;A&quot;, &quot;default2&quot;))</div><div class="line"></div><div class="line">    var personInformation = new scala.collection.mutable.HashMap[String, Int]</div><div class="line">    personInformation += (&quot;Scala&quot; -&gt; 13, &quot;Java&quot; -&gt; 23) //增加元素</div><div class="line">    //    personInformation -= (&quot;Java&quot;) //减少元素</div><div class="line">    for ((name, age) &lt;- personInformation) println(name + &quot;:&quot; + age)</div><div class="line">    for (key &lt;- personInformation.keySet) println(key)</div><div class="line">    for (value &lt;- personInformation.values) println(value)</div><div class="line">    println(&quot;---------生成新Map[int,string]-------------&quot;)</div><div class="line">    val result = for ((name, age) &lt;- personInformation) yield (age, name)</div><div class="line">    println(result.keySet.mkString(&quot; &quot;))</div><div class="line">    println(result.values.mkString(&quot; &quot;))</div><div class="line">    println(&quot;---------SortedMap-------------&quot;)</div><div class="line">    val sortedMap = scala.collection.mutable.SortedMap((&quot;A&quot;, 10), (&quot;C&quot;, 20), (&quot;B&quot;, 30))</div><div class="line">    println(sortedMap.keySet.mkString(&quot; &quot;))</div><div class="line">    println(sortedMap.values.mkString(&quot; &quot;))</div><div class="line">    //A B C</div><div class="line">    //10 30 20</div><div class="line">    println(&quot;---------LinkedHashMap-------------&quot;)</div><div class="line">    val linkedHashMap = scala.collection.mutable.LinkedHashMap((&quot;3&quot;, 10), (&quot;1&quot;, 20), (&quot;4&quot;, 30), (&quot;5&quot;, 30), (&quot;9&quot;, 30))</div><div class="line">    linkedHashMap +=((&quot;12&quot;,12),(&quot;001&quot;,1))</div><div class="line">    linkedHashMap +=(&quot;Scala&quot;-&gt;13,&quot;python&quot;-&gt;10)</div><div class="line">    println(linkedHashMap.keySet.mkString(&quot; &quot;))</div><div class="line">    println(linkedHashMap.values.mkString(&quot; &quot;))</div><div class="line">     println(&quot;---------Tuple中可以有很多不同类型的数据-------------&quot;)</div><div class="line">     val information=(&quot;Test&quot;,&quot;male&quot;,30,&quot;String&quot;)</div><div class="line">     //由于类型不同无法使用for(item&lt;-xx)方式读取</div><div class="line">     println(information._3)</div><div class="line">     </div><div class="line">     </div><div class="line">     </div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>一种Map Reduce的计算示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">   val txt1=&quot;I am into Spark so much&quot;</div><div class="line">      val txt2=&quot;Scala is powerful&quot;</div><div class="line">      println(List(txt1,txt2).flatMap&#123;x=&gt;x.split(&quot; &quot;)&#125;.map &#123;x=&gt;(x,1)&#125;.map(x=&gt;x._2).reduce(_+_) )</div><div class="line">      println(List(txt1,txt2).flatMap&#123;x=&gt;x.split(&quot; &quot;)&#125;.map &#123;(_,1)&#125;.map&#123;(_._2)&#125;.reduce(_+_)) // 简化语法，同上</div><div class="line">      println(List(txt1,txt2).flatMap&#123;x=&gt;x.split(&quot; &quot;)&#125;.map &#123;(_,1)&#125;.map&#123;(_._2)&#125;.reduce((x,y)=&gt;x+y)) // 简化语法，同上</div><div class="line">      /**</div><div class="line">       * 计算过程</div><div class="line">       * List(&quot;I am into Spark so much&quot;,&quot;Scala is powerful&quot;)  -&gt; .flatMap&#123;x=&gt;x.split(&quot; &quot;)</div><div class="line">       * List(I, am, into, Spark, so, much, Scala, is, powerful)  -&gt; .map &#123;x=&gt;(x,1)&#125;</div><div class="line">       * List((I,1), (am,1), (into,1), (Spark,1), (so,1), (much,1), (Scala,1), (is,1), (powerful,1))  -&gt; .map(x=&gt;x._2)</div><div class="line">       * List(1, 1, 1, 1, 1, 1, 1, 1, 1)  -&gt; .reduce(_+_)</div><div class="line">       * 9</div><div class="line">       */</div><div class="line"></div><div class="line">占位符_用法演示     </div><div class="line">      List(0,1,2,3,4,5).foreach&#123;x=&gt;print(x)&#125;</div><div class="line">      println</div><div class="line">      List(0,1,2,3,4,5).foreach&#123;print(_)&#125; // 简化语法，同上</div><div class="line">      println</div><div class="line">      List(0,1,2,3,4,5).foreach&#123;print _ &#125; // 简化语法，同上</div><div class="line">      println</div><div class="line">      List(0,1,2,3,4,5).foreach&#123;print&#125; // 简化语法，同上</div><div class="line">      println</div><div class="line">      List(0,1,2,3,4,5).foreach(print) // 简化语法，同上</div><div class="line">      println</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy6/" data-id="cj8pxeosl00225kqr08uzxlz6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-scalaStudy4" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -101,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy4/" data-id="cj8pwpi970021l0qreb6ulztf" class="article-share-link">Поделиться</a>
+      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy4/" data-id="cj8pxeosc001y5kqrup1wa46g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
@@ -143,49 +313,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy3/" data-id="cj8pwpi92001yl0qrpwda5j7l" class="article-share-link">Поделиться</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-scalaStudy2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/05/scalaStudy2/" class="article-date">
-  <time datetime="2017-10-05T07:23:19.000Z" itemprop="datePublished">2017-10-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Scala/">Scala</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/05/scalaStudy2/">Scala学习笔记（二）Scala面向对象编程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre class="prettyprint"><p>package com.study<br><br> /**<br>  * Scala面向对象编程<br>  * <br>  * 1，在scala中类是用Class关键字<br>  * 2，可以使用new ClassName的方式构建出类的对象<br>  * 3，如果名称相同，则object中的内容都是class的静态内容，也就是说object中的内容class都可以在没有实例的时候直接去调用；<br>  * 正是因为可以再没有类的时候去调用object的一切内容，所以可以使用object中的特定方法来创建类的实例，而这个特定方法就是apply方法；<br>  * 4，object中的apply方式是class对象生成的工厂方法，用于控制对象的生成；<br>  * 5，很多框架的代码一般直接调用抽象类的object的apply方法去生成类的实例对象：<br>  * 第一：其秘诀在于apply具有类的对象生成的一切生杀大权，抽象类是不可以直接实例化的，在apply方法中可以实例化抽象类的子类，以Spark中的<br>  * 图计算为例，Graph是抽象的class，在object Graph中的apply方法实际上是调用了Grap的子类GraphImpl来构建<br>  * Graph类型的对象实例的，当然从Spark图计算的源码可以看出，GraphImpl的构造对象也是使用了object GraphImpl的apply方法；<br>  * 第二：这种方式的神奇学校应在于，更加能够应对代表版本迭代或者修改的变化，这是更高意义的面向接口编程；<br>  * 6，object HelloOOP是class HelloOOP的伴生对象，class HelloOOP可以直接访问object HelloOOP中的一切内容。<br>  *     class HelloOOP是object HelloOOP的伴生类，object HelloOOP可以直接访问class HelloOOP的一切内容，一个特例是用private[this]修饰的成员。<br>  * <br>  * 7，在定义Scala的Class的时候，可以直接在类名后面（）里加入类的构造参数，此时在apply方法中也必须有这些参数<br>  * 8，Scala中可以在object中提供多个构造方法<br>  */<br>class HelloOOP(age:Int){<br>  var name="Spark"<br>  def sayHello=println("Hi,My name is "+name+" I am "+ age + "years old")<br>  println(sayHello)<br>} <br><br>object HelloOOP {<br>  var number=0<br><br>  def main(args: Array[String]): Unit = {<br>    var helloOOP=HelloOOP()<br>    helloOOP.sayHello<br>  }<br>  <br>  <br>  def apply():HelloOOP={<br>    new HelloOOP(10)<br>  }<br>  <br>  def apply(age:Int ):HelloOOP={<br>    new HelloOOP(age)<br>  }<br>}</p></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy2/" data-id="cj8pwpi8y001ul0qr8wwygvsa" class="article-share-link">Поделиться</a>
+      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy3/" data-id="cj8pxeos5001s5kqr8mgtiyph" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
@@ -228,7 +356,49 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy1/" data-id="cj8pwpi8s001rl0qrc9wwzgkd" class="article-share-link">Поделиться</a>
+      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy1/" data-id="cj8pxeos2001p5kqrk2ouklng" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-scalaStudy2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/scalaStudy2/" class="article-date">
+  <time datetime="2017-10-05T07:23:19.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Scala/">Scala</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/scalaStudy2/">Scala学习笔记（二）Scala面向对象编程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre class="prettyprint"><p>package com.study<br><br> /**<br>  * Scala面向对象编程<br>  * <br>  * 1，在scala中类是用Class关键字<br>  * 2，可以使用new ClassName的方式构建出类的对象<br>  * 3，如果名称相同，则object中的内容都是class的静态内容，也就是说object中的内容class都可以在没有实例的时候直接去调用；<br>  * 正是因为可以再没有类的时候去调用object的一切内容，所以可以使用object中的特定方法来创建类的实例，而这个特定方法就是apply方法；<br>  * 4，object中的apply方式是class对象生成的工厂方法，用于控制对象的生成；<br>  * 5，很多框架的代码一般直接调用抽象类的object的apply方法去生成类的实例对象：<br>  * 第一：其秘诀在于apply具有类的对象生成的一切生杀大权，抽象类是不可以直接实例化的，在apply方法中可以实例化抽象类的子类，以Spark中的<br>  * 图计算为例，Graph是抽象的class，在object Graph中的apply方法实际上是调用了Grap的子类GraphImpl来构建<br>  * Graph类型的对象实例的，当然从Spark图计算的源码可以看出，GraphImpl的构造对象也是使用了object GraphImpl的apply方法；<br>  * 第二：这种方式的神奇学校应在于，更加能够应对代表版本迭代或者修改的变化，这是更高意义的面向接口编程；<br>  * 6，object HelloOOP是class HelloOOP的伴生对象，class HelloOOP可以直接访问object HelloOOP中的一切内容。<br>  *     class HelloOOP是object HelloOOP的伴生类，object HelloOOP可以直接访问class HelloOOP的一切内容，一个特例是用private[this]修饰的成员。<br>  * <br>  * 7，在定义Scala的Class的时候，可以直接在类名后面（）里加入类的构造参数，此时在apply方法中也必须有这些参数<br>  * 8，Scala中可以在object中提供多个构造方法<br>  */<br>class HelloOOP(age:Int){<br>  var name="Spark"<br>  def sayHello=println("Hi,My name is "+name+" I am "+ age + "years old")<br>  println(sayHello)<br>} <br><br>object HelloOOP {<br>  var number=0<br><br>  def main(args: Array[String]): Unit = {<br>    var helloOOP=HelloOOP()<br>    helloOOP.sayHello<br>  }<br>  <br>  <br>  def apply():HelloOOP={<br>    new HelloOOP(10)<br>  }<br>  <br>  def apply(age:Int ):HelloOOP={<br>    new HelloOOP(age)<br>  }<br>}</p></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhucai.me/2017/10/05/scalaStudy2/" data-id="cj8pxeos9001v5kqrqv4tvrts" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scala/">Scala</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
@@ -278,7 +448,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2017/10/05/LancerInfo/" data-id="cj8pwpi6j000gl0qr9szloxii" class="article-share-link">Поделиться</a>
+      <a data-url="http://blog.zhucai.me/2017/10/05/LancerInfo/" data-id="cj8pxeoqc000g5kqrkbwuyl9e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/项目案例/">项目案例</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/驻才网/">驻才网</a></li></ul>
@@ -325,189 +495,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2017/10/04/hello-world/" data-id="cj8pwpi8i001il0qr3wy9ngv2" class="article-share-link">Поделиться</a>
+      <a data-url="http://blog.zhucai.me/2017/10/04/hello-world/" data-id="cj8pxeorn001a5kqr2zkczrcs" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-javaCore2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/11/javaCore2/" class="article-date">
-  <time datetime="2017-09-11T03:47:04.000Z" itemprop="datePublished">2017-09-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/11/javaCore2/">Java核心要点（2）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.作用域可见性<wbr><div><table width="80%" border="1" cellpadding="1" cellspacing="1"><tbody><tr><td>&nbsp;visibility</td><td>Classes&nbsp;</td><td>Method &amp; variables&nbsp;</td><td>Inner Class&nbsp;</td></tr><tr><td>Private&nbsp;</td><td>N/A&nbsp;</td><td>本Class可见&nbsp;</td><td>&nbsp;本Class可见</td></tr><tr><td>&nbsp;Default</td><td>同package可见</td><td>同package可见&nbsp;</td><td>&nbsp;同package可见</td></tr><tr><td>&nbsp;Protected</td><td>N/A&nbsp;</td><td>同package可见+继承可见&nbsp;</td><td>同package可见+继承可见&nbsp;</td></tr><tr><td>&nbsp;Public</td><td>Any package&nbsp;</td><td>任何地方都可见&nbsp;</td><td>&nbsp;任何地方都可见</td></tr></tbody></table>&nbsp; &nbsp;</div><div>2.内部类的调用</div><div>Outter outter=new Outter()</div><div>Outter.Inner inner=new outter.new Inner()</div><div><br></div><div>3.运算时 i=x+y &nbsp; &nbsp;左值由空间保障，右值没有空间保障</div><div>4.y=x++ &nbsp;vs &nbsp; y=++x &nbsp; &nbsp; 前一种会引入一个tmp变量来保存中间数，后一种不会，推荐使用后者</div><div>5.if(x&lt;0 &amp; ++x&gt;0) ….</div><div>&nbsp; &nbsp;if(boolean &amp; boolean) …. and操作，会执行左右两端</div><div>&nbsp; &nbsp;if(boolean &amp;&amp; boolean) …. shortcut and操作，只执行一端</div><div>&nbsp; &nbsp;if(boolean | boolean) …. （待验证）</div><div>&nbsp; &nbsp;if(boolean || boolean) …. （待验证）</div><div>6.for while上面可加label</div><div><span style="white-space:pre;">    </span>AAA：</div><div><span style="white-space:pre;">    </span>for…. continue AAA; &nbsp; break AAA;</div><div><br></div><div>7.Java异常继承结构</div><div><span style="white-space:pre;">            </span>Throwable &nbsp;&nbsp;</div><div>Error &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Exception</div><div><span style="white-space:pre;">        </span>&nbsp; |<span style="white-space:pre;">    </span>RunTimeException</div>JVM态<span style="white-space:pre;">    </span>&nbsp; | &nbsp;&nbsp;<span style="white-space:pre;">    </span>用户态<div>因此所有异常都可catch(Throwable e)</div><div><br></div><div>8.checked Exception 需要提前try catch</div><div><span style="white-space:pre;">    </span>unchecked Exception 不需要提前try catch</div></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2017/09/11/javaCore2/" data-id="cj8pwpi8l001kl0qr0lofetzl" class="article-share-link">Поделиться</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-javaCore1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/11/javaCore1/" class="article-date">
-  <time datetime="2017-09-11T03:18:20.000Z" itemprop="datePublished">2017-09-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/后端/">后端</a>►<a class="article-category-link" href="/categories/技术/开发/后端/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/11/javaCore1/">Java核心要点（1）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><br>1.JDK的tools有许多工具是不允许分发的授权，JRE是可分发的<br>2.Java是解释型语言，解释一步执行一步<br>3.基于上一条，IDE中调试时，可动态修改代码<br>4.运行过的.class会生成c语言代码，下次执行时不再编译<br>5.jar包的格式=zip包，两者是一样的<br>6.Java所有的函数和变量都属于类——面向对象<br>7.一个类文件，只能有一个public级别的class<br>8.一种main方法返回方式：System.exit(255);<br>9.所有Object都在heap（栈）中；<br>    String str=new String(“abc”);//str作为变量名，会保存在栈中<br>    Int i=10;//i作为变量名，会保存在栈中<br>    func(str);//这里传入的str是指针<br>10.CPU架构可分为Sparc Sun Intel AT&amp;T ‘IBM Power’ Motorola<br>11.不同位数对应的存储空间<br>    32bit:2^32 4G    64bit: 2^64<br>    32bit下 2G kernel use，2G user use<br>    Windows下，内存使用1.6G后，随时可能出现问题：core dump<br>12.寻址空间<br>    Windows  1.6G    大于1.6G后，随时可能出现问题：core dump<br>    Solaris   2G<br>    Linux     3G<br>13.接口的用途：类实现了哪些接口，就可以跟哪些接口打交道，一个类可以具有多个面孔(接口)<br>14.方法前加final是指继承时不许override<br>15.关于默认值<br>    局部变量   N/A   编译不通过<br>    全局变量      0、0.00、null、false   取决于类型<br>    全局数组      0、0.00、null、false   取决于类型<br>    局部数组      0、0.00、null、false   取决于类型<br>    局部数组半初始化    N/A<br>16.字节对齐    C++概念，Java无此概念<br>17.字节序    与编译器CPU架构有关    BigEndian   (待完善)<br>18.Java中存储长度：<br>    byte 8bit        short 16        int&amp;float 32        double&amp;long 64<br>19.数组提供工具类 java.util.Arrays，提供排序 查找 打印等功能<br>20.class前加final，则不许被继承<br></p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2017/09/11/javaCore1/" data-id="cj8pwpi8e001el0qr28u1ry5r" class="article-share-link">Поделиться</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AdfHowToUseSecurity" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/11/AdfHowToUseSecurity/" class="article-date">
-  <time datetime="2017-09-11T03:18:20.000Z" itemprop="datePublished">2017-09-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/全端/">全端</a>►<a class="article-category-link" href="/categories/技术/开发/全端/ADF/">ADF</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/11/AdfHowToUseSecurity/">应用安全控制 ADF Security</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>系统安全是常常被开发人员最后想起来的一部分，但却是非常重要的部分。<br><br>我们应该从一开始就要进行规划。<br></p>
-<p>很多Spring项目会基于Spring Security做安全模块（当然有自己写filter的，还有更多的是没有安全控制…），Spring Security其实是Java Security的一种实现。</p>
-<p>在ADF中，ADF Security也是Java Security的一种实现，实现ADF Security可以让我们的应用满足企业级安全规范。</p>
-<p>下文描述ADF Security的配置方式</p>
-
-
-	<div class="row">
-    <embed src="http://oxb319f0v.bkt.clouddn.com/%E6%80%8E%E6%A0%B7%E5%9C%A8ADF%E5%BC%80%E5%8F%91%E6%97%B6%E6%A8%A1%E6%8B%9F%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2017/09/11/AdfHowToUseSecurity/" data-id="cj8pwpi550004l0qrn81gap3y" class="article-share-link">Поделиться</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ADF/">ADF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-DF-UI-11g-vs-12c" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/13/DF-UI-11g-vs-12c/" class="article-date">
-  <time datetime="2016-10-13T11:51:00.000Z" itemprop="datePublished">2016-10-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/开发/">开发</a>►<a class="article-category-link" href="/categories/技术/开发/全端/">全端</a>►<a class="article-category-link" href="/categories/技术/开发/全端/ADF/">ADF</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/13/DF-UI-11g-vs-12c/">ADF UI 11g vs 12c</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div class="editor-area" id="noteIFrameContent"><div style="white-space: pre-wrap;line-height:1.875;line-height:1.875;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;">11G 风格</span></div><div yne-bulb-block="image"><img style="width: 864px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/c5b8bb53f77741e1b30f5cbef0e03e22.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/c5b8bb53f77741e1b30f5cbef0e03e22.jpg"></div><div yne-bulb-block="image"><img style="width: 625px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/38ad92635f584cf2b0cba1609b3ae53c.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/38ad92635f584cf2b0cba1609b3ae53c.jpg"></div><div yne-bulb-block="image"><img style="width: 625px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/3f05292ce2334c3ba30409cb8426d350.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/3f05292ce2334c3ba30409cb8426d350.jpg"></div><div yne-bulb-block="image"><img style="width: 950px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/ca3e3deb3c3148d2b60ac7d84862f958.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/ca3e3deb3c3148d2b60ac7d84862f958.jpg"></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><br></div><div yne-bulb-block="image"><img style="width: 908px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/10420a408d9e4f8c955e112298b3528d.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/10420a408d9e4f8c955e112298b3528d.jpg"></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;"> </span></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;"> </span></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;">12c Alta UI 定制后的风格</span></div><div yne-bulb-block="image"><img style="width: 653px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/ffd0ef020369424ea64fff29271bbcb0.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/ffd0ef020369424ea64fff29271bbcb0.jpg"></div><div yne-bulb-block="image"><img style="width: 1444px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/61b904ebfed547869fb11e7acf63cb83.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/61b904ebfed547869fb11e7acf63cb83.jpg"></div><div yne-bulb-block="image"><img style="width: 1211px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/3053daf0e10c480c8c3d39565f20988c.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/3053daf0e10c480c8c3d39565f20988c.jpg"></div><div yne-bulb-block="image"><img style="width: 937px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/a2f00a24e3cb429782f1a99331b98183.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/a2f00a24e3cb429782f1a99331b98183.jpg"></div><div yne-bulb-block="image"><img style="width: 1384px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/d034a15c12814656b545e370d1324f2d.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/d034a15c12814656b545e370d1324f2d.jpg"></div><div yne-bulb-block="image"><img style="width: 1276px; cursor: pointer;" src="http://oxb319f0v.bkt.clouddn.com/67bb6d009886480fba2301d441d2133d.jpg" data-media-type="image" data-original="http://oxb319f0v.bkt.clouddn.com/67bb6d009886480fba2301d441d2133d.jpg"></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;"> </span></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;"> </span></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;"> </span></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;"> </span></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;"> </span></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"><span style="font-family:微软雅黑;background-color:#ffffff;"> </span></div><div style="white-space: pre-wrap;" yne-bulb-block="paragraph"> </div></div>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhucai.me/2016/10/13/DF-UI-11g-vs-12c/" data-id="cj8pwpi5t0009l0qryqyrsyur" class="article-share-link">Поделиться</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ADF/">ADF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li></ul>
-
     </footer>
   </div>
   
@@ -526,7 +516,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Категории</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/">兴趣爱好</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/3D打印/">3D打印</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/国学/">国学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/国学/中医养生/">中医养生</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/生物识别/">生物识别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/自动驾驶/">自动驾驶</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/自然科学/">自然科学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/自然科学/多维宇宙/">多维宇宙</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/兴趣爱好/自然科学/量子/">量子</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/">产品</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/BPM/">BPM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/Nosql/">Nosql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/OSB/">OSB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/SOA/">SOA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/云/">云</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/分布式缓存/">分布式缓存</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/">大数据</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/Spark/">Spark</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/大数据/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/安全-身份管理/">安全+身份管理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/容器/">容器</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/产品/流程/">流程</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/实施/">实施</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/">开发</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/全端/">全端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/全端/ADF/">ADF</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/其它/">其它</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/">后端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/后端/Scala/">Scala</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/数据库/">数据库</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/">服务器端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/Scala/">Scala</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/服务器端/Spring/">Spring</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/开发/移动端/">移动端</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/智能/">智能</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/智能/Tensorflow/">Tensorflow</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/智能/基础算法/">基础算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/智能/现代算法/">现代算法</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/架构/">架构</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/架构/安全/">安全</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/架构/环境/">环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/架构/集成/">集成</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/规划/">规划</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/规划/人-财/">人+财</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/规划/协作方式/">协作方式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/规划/规范-培训/">规范+培训</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/设计/">设计</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/">运维</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/云/">云</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/容器/">容器</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/运维/数据库/">数据库</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目案例/">项目案例</a></li></ul>
     </div>
@@ -536,7 +526,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Метки</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADF/">ADF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jdeveloper/">Jdeveloper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenStack/">OpenStack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RBAC/">RBAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/REST/">REST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SOA/">SOA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scala/">Scala</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spark/">Spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tensorflow/">Tensorflow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中间件/">中间件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云/">云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/企业级系统/">企业级系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存计算/">内存计算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式缓存/">分布式缓存</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原创/">原创</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/大数据/">大数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/容器/">容器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/建模/">建模</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源/">开源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/性能，原创/">性能，原创</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境安装/">环境安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/转载/">转载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目案例/">项目案例</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/驻才网/">驻才网</a></li></ul>
     </div>
@@ -546,16 +536,16 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Облако меток</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ADF/" style="font-size: 17.78px;">ADF</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Java/" style="font-size: 14.44px;">Java</a> <a href="/tags/Jdeveloper/" style="font-size: 10px;">Jdeveloper</a> <a href="/tags/OpenStack/" style="font-size: 10px;">OpenStack</a> <a href="/tags/Oracle/" style="font-size: 18.89px;">Oracle</a> <a href="/tags/RBAC/" style="font-size: 10px;">RBAC</a> <a href="/tags/REST/" style="font-size: 10px;">REST</a> <a href="/tags/SOA/" style="font-size: 13.33px;">SOA</a> <a href="/tags/Scala/" style="font-size: 15.56px;">Scala</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Spark/" style="font-size: 10px;">Spark</a> <a href="/tags/Tensorflow/" style="font-size: 10px;">Tensorflow</a> <a href="/tags/中间件/" style="font-size: 13.33px;">中间件</a> <a href="/tags/云/" style="font-size: 10px;">云</a> <a href="/tags/企业级系统/" style="font-size: 15.56px;">企业级系统</a> <a href="/tags/内存计算/" style="font-size: 10px;">内存计算</a> <a href="/tags/分布式缓存/" style="font-size: 11.11px;">分布式缓存</a> <a href="/tags/前端/" style="font-size: 12.22px;">前端</a> <a href="/tags/原创/" style="font-size: 20px;">原创</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/容器/" style="font-size: 10px;">容器</a> <a href="/tags/建模/" style="font-size: 10px;">建模</a> <a href="/tags/开源/" style="font-size: 10px;">开源</a> <a href="/tags/微服务/" style="font-size: 11.11px;">微服务</a> <a href="/tags/性能，原创/" style="font-size: 10px;">性能，原创</a> <a href="/tags/技术/" style="font-size: 18.89px;">技术</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/环境安装/" style="font-size: 10px;">环境安装</a> <a href="/tags/转载/" style="font-size: 14.44px;">转载</a> <a href="/tags/随笔/" style="font-size: 11.11px;">随笔</a> <a href="/tags/项目案例/" style="font-size: 16.67px;">项目案例</a> <a href="/tags/驻才网/" style="font-size: 10px;">驻才网</a>
+      <a href="/tags/ADF/" style="font-size: 18.75px;">ADF</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Jdeveloper/" style="font-size: 10px;">Jdeveloper</a> <a href="/tags/OpenStack/" style="font-size: 10px;">OpenStack</a> <a href="/tags/Oracle/" style="font-size: 17.5px;">Oracle</a> <a href="/tags/RBAC/" style="font-size: 10px;">RBAC</a> <a href="/tags/REST/" style="font-size: 11.25px;">REST</a> <a href="/tags/SOA/" style="font-size: 13.75px;">SOA</a> <a href="/tags/Scala/" style="font-size: 15px;">Scala</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Spark/" style="font-size: 10px;">Spark</a> <a href="/tags/Tensorflow/" style="font-size: 10px;">Tensorflow</a> <a href="/tags/中间件/" style="font-size: 13.75px;">中间件</a> <a href="/tags/云/" style="font-size: 10px;">云</a> <a href="/tags/企业级系统/" style="font-size: 15px;">企业级系统</a> <a href="/tags/内存计算/" style="font-size: 10px;">内存计算</a> <a href="/tags/分布式缓存/" style="font-size: 11.25px;">分布式缓存</a> <a href="/tags/前端/" style="font-size: 12.5px;">前端</a> <a href="/tags/原创/" style="font-size: 20px;">原创</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/容器/" style="font-size: 10px;">容器</a> <a href="/tags/建模/" style="font-size: 10px;">建模</a> <a href="/tags/开源/" style="font-size: 11.25px;">开源</a> <a href="/tags/微服务/" style="font-size: 11.25px;">微服务</a> <a href="/tags/性能，原创/" style="font-size: 10px;">性能，原创</a> <a href="/tags/技术/" style="font-size: 17.5px;">技术</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/环境安装/" style="font-size: 10px;">环境安装</a> <a href="/tags/转载/" style="font-size: 15px;">转载</a> <a href="/tags/随笔/" style="font-size: 11.25px;">随笔</a> <a href="/tags/项目案例/" style="font-size: 16.25px;">项目案例</a> <a href="/tags/驻才网/" style="font-size: 10px;">驻才网</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Архив</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">十一月 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">六月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">十月 2011</a></li></ul>
     </div>
@@ -565,28 +555,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Недавние записи</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/10/13/于RBAC的安全系统用例图/">基于RBAC的安全系统用例图</a>
+            <a href="/2017/10/13/DF技术介绍/">ADF技术介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/13/eveloping-and-Securing-RESTful-Web-Services/">Developing and Securing RESTful Web Services</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/13/DF-Essentials免费版本研究/">ADF Essentials免费版本研究</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/13/为项目案例/">华为项目案例</a>
           </li>
         
           <li>
             <a href="/2017/10/13/布式缓存用户信息/">分布式缓存用户信息</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/13/eveloper-Java建模工具研究/">Jdeveloper自带的免费Java建模工具</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/13/enstack安装过程概要/">Openstack安装过程概要</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/11/ogTimeStoneRecord/">网站建设进展</a>
           </li>
         
       </ul>
@@ -602,7 +592,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 muhongdi@qq.com<br>
-      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
